@@ -1,0 +1,81 @@
+baseurl = "http://jadonbelezos.com/"
+relativeURLs = true
+title = "jadon's blog"
+author = "jadon belezos"
+# Shown in the side menu
+copyright = "author 2016. jadon belezos"
+canonifyurls = true
+paginate = 12
+theme="blackburn"
+
+[indexes]
+  tag = "tags"
+  topic = "topics"
+
+[params]
+  # Shown in the home page
+  subtitle = " jadon belezos website"
+  brand = "jadon's blog"
+  disqus = "mycoder"
+  # CSS name for highlight.js
+  #highlightjs = "androidstudio"
+  dateFormat = "02 Jan 2006, 15:04"
+  
+[menu]
+#  Shown in the side menu.
+  [[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    weight = 1
+    identifier = "home"
+    url = "/"
+	[[menu.main]]
+	name = "Projects"
+	pre = "<i class='fa fa-home fa-fw'></i>"
+	weight = 2
+	identifier = "project"
+	url = "/project/"
+  [[menu.main]]
+    name = "Posts"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 3
+    identifier = "post"
+    url = "/post/"
+	[[menu.main]]
+    name = "tags"
+    pre = "<i class='fa fa-tags fa-fw'></i>"
+    weight = 4
+    identifier = "tags"
+    url = "/tags/"
+  [[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 5
+    identifier = "about"
+    url = "/about/"
+  [[menu.main]]
+    name = "Contact"
+    pre = "<i class='fa fa-phone fa-fw'></i>"
+    weight = 6
+    url = "/contact/"
+ 
+	
+
+[social]
+  # Link your social networking accouns to the side menu
+  # by entering your username or ID.
+
+  # SNS microblogging
+  facebook = "jadon.belezos"
+  #googleplus = "*"
+
+
+  # SNS career oriented
+  linkedin = "jadon belezos"
+
+  # Techie
+  github = "warlord500"
+  stackoverflow = "3458024/5hammer"
+  
+  #games
+  steam = "5hammer"
