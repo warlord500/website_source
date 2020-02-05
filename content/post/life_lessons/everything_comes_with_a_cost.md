@@ -2,7 +2,7 @@
 title = "Everything comes with a cost"
 date = "2020-01-24T02:19:40-08:00"
 draft = false
-tags = []
+tags = ["life_lessons"]
 topics = []
 description = ""
 +++

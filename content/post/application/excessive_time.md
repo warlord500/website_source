@@ -8,7 +8,7 @@ description = ""
 +++
 I use my phone and computer in a lot of aspects. Everything from gaming, writing, music, drawing,  to my work. However, I Don't think its good to sit on your phone or computer all day every day. there are three tools that I use can help you reign in your usage of your phone and computer time that I will highly recommend anyone. 
 
-The first of the tools is for your phone I recommend to you is the app [screen time]. It gives you an idea of how much time you spend on your phone and breaks it down by app.  Screen Time can block by categories and individually. 
+The first of the tools is for your phone I recommend to you is the app [screen time][1]. It gives you an idea of how much time you spend on your phone and breaks it down by app.  Screen Time can block by categories and individually. 
 With this app, you might find yourself cutting a  lot of time just randomly scrolling and spend It on something you care about more.
 for me, I didn't realize I spend over 4 hours every day on my phone. 
 screen time help me reduce that time down to 2 hours. 
