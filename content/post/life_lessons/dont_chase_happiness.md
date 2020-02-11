@@ -11,7 +11,7 @@ If I have learned one thing in my short life, it is this simple lesson; don't ch
 Those chase happiness are those who are most miserable. Why? Simply because you can't chase happiness.
 You are chasing success or material wealth or some out there knowledge. 
 That degree, girlfriend, fancy truck, big house, or pie won't make you happy. 
-They will only give you a clear sense of joy.
+They will only give you a diminishing sense  of joy.
  Chase the next most valuable, most expensive thing.
  
  Those who chase material stuff will find their happiness to be short-lived.
