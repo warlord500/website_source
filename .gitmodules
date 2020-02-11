@@ -1,3 +1,6 @@
 [submodule "themes/blackburn"]
 	path = themes/blackburn
 	url = https://github.com/yoshiharuyamashita/blackburn.git
+[submodule "static/A_guide_to_visiting_canada"]
+	path = static/A_guide_to_visiting_canada
+	url = E:/schoolwork/summer_term_2019/hands_on
