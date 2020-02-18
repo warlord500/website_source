@@ -2,7 +2,7 @@
 title = "A_Guide_to_visiting_canada"
 date = "2020-02-11T09:25:49-08:00"
 draft = false
-tags = ["external_website"]
+tags = ["external_website","programming"]
 topics = []
 description = ""
 +++

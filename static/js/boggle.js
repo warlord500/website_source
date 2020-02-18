@@ -26,7 +26,6 @@ function setup(){
 	xhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
 		window.gameData.words = this.responseText.split("\n");
-		document.getElementById("number_of_words").innerHTML = window.gameData.words.length;
 	}
   };
   xhttp.open("GET", "/js/words.txt", true);
@@ -196,7 +195,7 @@ function canCompleteWord(currentWord){
 window.addEventListener("load", function(){
 	setup();
 	window.document.getElementById("checkWord").addEventListener("click",checkWord);
-	window.document.getElementById("countWords").addEventListener("click",countNumberOfValidWords);
+	//window.document.getElementById("countWords").addEventListener("click",countNumberOfValidWords);
 	window.document.getElementById("gameBoard").addEventListener("click",selectALetter);
 	window.document.getElementById("updateGameData").addEventListener("click",setup);
 });
