@@ -1,13 +1,23 @@
 +++
-title = "Grateful_for_housework"
-date = "2020-01-01T14:34:20-08:00"
-draft = true
+title = "Grateful for Housework"
+date = "2020-02-024T9:15:20-08:00"
+draft = false
 tags = ["life_lessons"]
 topics = []
 description = ""
 +++
 
 housework the bane of modern existence.
-It is one thing you should learn to be grateful for because you could not have dishes to wash at all. You could be forced to eat out of garbage can. you could have no vacuum for vacuuming up your house.
+i have increasingly learned in many cases that I should be grateful that I have even a house to work in, 
+dishes to clean, laundry to wash and  carpet to vacuum.   Instead of thinking, "ugh, I hate laundry. why do you exist?".
+think "I hate cleaning laundry but you do help me out in so many ways thank you for that."
+you think I am gonna appreciate my laundry by cleaning it.  
 
-Next you do housework think about how much worse it could be if you didn't have the stuff to do housework on. 
+every single time, I go to work, I don't think ugh another day at work. I think yes, 
+I get to help people out today. yes, I do this for goals in my life.  
+yes, because of this job, I can sometimes eat awesome tasting food!!. 
+
+I believe this sort of positive mentality about my work help me get more done in my job than other attitudes.
+by focusing, what you are grateful for, I  creates a desire to find ways to active appreciate the things you have. 
+thus always be grateful, and you never know it might turn out that it gets more things that you thought.
+
