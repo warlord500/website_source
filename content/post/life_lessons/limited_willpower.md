@@ -12,7 +12,7 @@ You have limited will power and limited time every single day. However, I believ
 This idea is about maximizing your willpower each day.
 To form good habits, try to make a particular task as easy as possible.  You don't want to give yourself any reason not to do it. If you're going to exercise every day,
 You don't make your goal go to the gym every day for three hours. 
-Just start by doing a single push up and maybe a single situp. 
+Just start by doing a single push-up and maybe a single sit-up. 
 You ramp it up little by little as it gets easier, so your continually pushing yourself.
 
 
