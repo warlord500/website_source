@@ -18,8 +18,9 @@ here is a recreation of ultimate tic-tac-toe for you to enjoy.
 
 if my instructions make no sense, the program should guide you to what you can't and can do. 
 
+<!--more--> 
+
 <div id="application">
-    
     <p>current players turn: <span id="player"></span></p>
     <p>you can place in big square: <span id="place"></span></p>
     <canvas id="gameBoard" width="500" height="500" style="border: 4px black solid"></canvas>

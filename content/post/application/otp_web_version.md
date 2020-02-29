@@ -16,23 +16,19 @@ below the application can generate random "keys" for encrypting and decrypting d
 keys are represented in hexadecimal.
  
 <script defer src="/js/otp_crypt_web.js"></script>
-
 <div id="application">
 	<label>text source</label><br />
 	<textarea id="msg" class="appInput"	cols="150" rows="15"></textarea>
 	<br />
 	<br />
-	
 	<label>key source</label><br />
 	<textarea id="key" class="appInput" cols="150" rows="15"></textarea>
 	<br />
 	<br />
-	
 	<label>result</label><br>
 	<textarea id="results" class="appInput" cols="150" rows="15" readonly></textarea><br>
 	<br />
 	<br />
-	
 	<button id="gen">generate key</button>
 	<button id="encrypt">encrypt msg</button>
 	<button id="decrypt">decrypt msg</button>

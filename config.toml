@@ -8,6 +8,11 @@ canonifyurls = true
 paginate = 12
 theme="blackburn"
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+	  
 [indexes]
   tag = "tags"
   topic = "topics"
