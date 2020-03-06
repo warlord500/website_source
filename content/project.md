@@ -8,7 +8,7 @@ topics = []
 this is a list of all the projects I have ever done.
 many of them are work in progresses.<br /><br />
  
-+ SpaceT: <a href="http://github.com/warlord500/SpaceT.git">github_Page</a>(actively being developed)
++ SpaceT: <a href="http://github.com/warlord500/SpaceT.git">github_Page</a>
 + random_project_selection: <a href="/cgi-bin/fossil.cgi/rand_proj_select/">fossil_page</a>(check out at old website if your really bored)
 + one time pad encryption: <a href="/cgi-bin/fossil.cgi/otp_crypt/">fossil_page</a>(no major changes are planned at this time) 
 + nat_doc_py: [fossil page](/cgi-bin/fossil.cgi/nat_doc_py/)
