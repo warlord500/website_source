@@ -19,3 +19,5 @@ You ramp it up little by little as it gets easier, so your continually pushing y
 To break a bad habit, make doing that particular bad thing harder to do. 
  Examples of that are set say a timer on your phone of when you should be going to bed, Blocking those distracting websites if you do not want to spend as much time on them.  
 
+by decreasing the desire for "negative" habits and increasings the ease to do "good" habits, 
+you will find yourself more with a more  consistent follow through.
