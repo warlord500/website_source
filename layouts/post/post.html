@@ -6,7 +6,7 @@
 <div class="content">
 
   {{ range .Data.Pages.GroupByDate "2006" }}
-  <h2>{{ .Key }} <span class="postsNumYear">({{len .Pages }})</span></h2>
+  <h2>{{ .Key }} <span class="postsNumYear">({{len .Pages }}p)</span></h2>
   <ul>
   {{ range .Pages }}
     {{ .Render "li" }}
