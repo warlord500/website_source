@@ -15,7 +15,7 @@ a combination of performance and not quite perfect logic will update later and r
 <div id="application">
 	<p>current players turn: <span id="player"></span></p>
 	<p>number of words to be found: <span id="number_of_words"></span></p>
-	<canvas id="gameBoard" width="700px" height="600px" style="border: 4px black solid"></canvas>
+	<canvas id="gameBoard" width="700px" height="600px"></canvas>
 	<button id="countWords">count number of words</button>
 	<button id="updateGameData">refresh the game</button>
 	<button id="showDictionary">show dictionary</button>
