@@ -28,9 +28,8 @@ rust uses  the keyword 'mut' to signify this variable will change later in the f
 have such the subtle problem of Scala var and val declarations. 
 some code examples 
 <br/><br/>
+{{< highlight rust >}}
 
-
-<pre><code class="rust"> 
 	let test = 0i32;
 	let mut test = 0i32; 
 
@@ -40,10 +39,12 @@ some code examples
 	let mut x  = &0i; 
 	let x  = &mut 0i; 
 	let mut x  = &mut test; 
-</code></pre>
+{{< / highlight >}}
 
-quick comparison to c++ 
-<pre><code class="cplusplus"> 
+
+
+quick comparison to c++  
+{{< highlight CPP >}}
 	const int test = 0;
 	int test = 0;
 	//while these declarations might be hard to read.
@@ -55,7 +56,9 @@ quick comparison to c++
 	int const* x = &0;
 	const int* x = &test;
 	int* x = &test; 
-</code></pre>
+{{</ highlight >}}
+
+
 More often than not you want immutable variables. If correctness doesn't convince you, in certain cases having a variable be immutable can make it possible to optimize 
 certain algorithms giving you performance boost which is harder to achieve with everything being mutable. immutable structures can do less copying 
 if the resulting data structure is the same as one created earlier. while mutable must copy all of the data.
@@ -67,8 +70,4 @@ of having to go back and adding lots of annotations to achieve the same thing.
 if you are making a new language consider making immutability first class and by default to achieve these gains.
 an already established can gain some of the benefits by making it easy to declare immutable variables instead of mutable variables with annotations. 
 
-<link rel="stylesheet" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"></link>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
