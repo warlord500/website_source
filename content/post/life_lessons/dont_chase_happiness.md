@@ -12,7 +12,7 @@ Those chase happiness are those who are most miserable. Why? Simply because you 
 You are chasing success or material wealth or some out there knowledge. 
 That degree, girlfriend, fancy truck, big house, or pie won't make you happy. 
 They will only give you a diminishing sense  of joy.
- Chase the next most valuable, most expensive thing.
+always forcing you  to feel like you have to chase the next most valuable, most expensive thing.
  
  Those who chase material stuff will find their happiness to be short-lived.
  It ends up feeling like a blip in their life. 
