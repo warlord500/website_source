@@ -68,11 +68,6 @@ theme="blackburn"
     weight = 5
     identifier = "about"
     url = "/about/"
-  [[menu.main]]
-    name = "Contact"
-    pre = "<i class='fa fa-phone fa-fw'></i>"
-    weight = 6
-    url = "/contact/"
  
 	
 
