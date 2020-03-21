@@ -14,7 +14,7 @@ theme="blackburn"
       unsafe = true
   [markup.highlight]
     codeFences = true
-    guessSyntax = false
+    guessSyntax = true
     hl_Lines = ""
     lineNoStart = 1
     lineNos = true
@@ -22,6 +22,23 @@ theme="blackburn"
     noClasses = true
     style = "monokai"
     tabWidth = 4
+
+
+[imaging]
+resampleFilter = "box"
+# Default JPEG quality setting. Default is 75.
+quality = 85
+anchor = "smart"
+bgColor = "#ffffff"
+
+[imaging.exif]
+includeFields = ""
+excludeFields = ""
+disableDate = false
+disableLatLong = true
+
+
+
 	
 [indexes]
   tag = "tags"
