@@ -25,9 +25,9 @@ the budget sheet, figuring exactly how much money is coming in.
 in my particular case of working retail, my hours do vary sometimes by a lot from one week to next. 
 to figure out how much I would expect to make in a week I build table. I put in how much I make in an hour in the top. 
 so If I were to one day to make a pay raise all these numbers would auto Adjust. 
-![]   
 
-
+![balance sheet](/images/balance_sheet.png)   
+{{/* {{% imageProc "/images/balance_sheet.png" Resize 300 %}} */}}
 
 
 [libre]: http://www.gnu.org/philosophy/free-sw.html

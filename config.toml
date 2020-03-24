@@ -7,6 +7,8 @@ copyright = "author 2016. jadon belezos"
 canonifyurls = true
 paginate = 12
 theme="blackburn"
+enableGitInfo = true
+
 
 [markup]
   [markup.goldmark]
@@ -94,11 +96,8 @@ disableLatLong = true
 
   # SNS microblogging
   facebook = "jadon.belezos"
-  #googleplus = "*"
+  instagram = ""
 
-
-  # SNS career oriented
-  linkedin = "jadon belezos"
 
   # Techie
   github = "warlord500"

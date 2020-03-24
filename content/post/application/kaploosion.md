@@ -14,7 +14,7 @@ only expect the first the button to work reliably in all modern browsers</br>
 <img href="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjkj76i293LAhUT8mMKHZVPBBsQjRwIBw&url=http%3A%2F%2Fphotobucket.com%2Fimages%2Fexplosion%2520gif&bvm=bv.117868183,d.cGc&psig=AFQjCNHj8VLoS5Y_lLk_wQd6baqdPD6Bbg&ust=1459059726273388"></img>
 
 
-<audio src="http://mycoder.ddns.net/explosion.wav" id="a-explode"></audio>
+<audio src="audio/explosion.wav" id="a-explode"></audio>
 
 <button onclick="alert('ka boom')">this will cause an explosion</button>
 <button onclick="alert('ka boom')">this will cause an image to explode</button>
