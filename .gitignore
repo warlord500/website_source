@@ -2,3 +2,4 @@ public/
 deployment/
 themes/
 static/cgi-bin/fossil
+*.zip

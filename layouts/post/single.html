@@ -2,7 +2,9 @@
 
 <div class="header">
   <h1>{{ .Title }}</h1>
-  <h2>{{ .Description }}</h2>
+  {{ with .Description }}
+	<h2>{{ . }}</h2>
+  {{ end }}
 </div>
 <div class="content">
 
