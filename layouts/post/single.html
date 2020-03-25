@@ -10,7 +10,7 @@
  
   {{ .Content }}
  
- <p class="lastmod"> lastmod: {{ dateFormat "Mon Jan 2 15:04 MST 2006" .Lastmod }} </p>
+  <p class="lastmod"> last modified: {{ .Lastmod.Format "Mon Jan 2 15:04 MST 2006" }}</p>
  
   {{ partial "share.html" . }}
 
