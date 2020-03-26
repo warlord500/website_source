@@ -12,7 +12,8 @@
  
   {{ .Content }}
  
-  <p class="lastmod"> last modified: {{ .Lastmod.Format "Mon Jan 2 15:04 MST 2006" }}</p>
+{{ $LastModDate := .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}
+  <p class="lastmod"> last modified: <time datetime= " {{ $LastModDate }}">  {{ .Lastmod.Format "Mon Jan 2 15:04 MST 2006" }}</p>
  
   {{ partial "share.html" . }}
 

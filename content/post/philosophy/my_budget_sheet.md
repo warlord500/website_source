@@ -1,6 +1,7 @@
 +++
 title = "My_budget_sheet"
 date = "2020-03-21T12:40:07-07:00"
+description = "a quick tutorial on budget sheets"
 draft = true
 notoc = true  
 tags = []

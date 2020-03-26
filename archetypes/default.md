@@ -1,10 +1,11 @@
 +++
 title = "{{ replace .Name "-" " " | title }}"
+description = ""
 date = "{{ .Date }}"
 draft = true
 notoc = true  {{/*  no table of contents */}}
-tags = []
-topics = ["{{ path.Base .Dir}}"]
+tags = ["{{ path.Base .Dir}}"]
+topics = []
 description = ""
 +++
 
