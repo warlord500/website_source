@@ -6,7 +6,6 @@ draft = true
 notoc = true  {{/*  no table of contents */}}
 tags = ["{{ path.Base .Dir}}"]
 topics = []
-description = ""
 +++
 
 
