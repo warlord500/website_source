@@ -4,8 +4,8 @@ date = "2020-03-21T12:40:07-07:00"
 description = "a quick tutorial on budget sheets"
 draft = true
 notoc = true  
-tags = []
-topics = ["philosophy"]
+tags = ["philosophy"]
+topics = []
 +++
 I believe everyone should have a budget. What do I mean when I say budget?
 A record of how much money is going in and out of each of your accounts. 

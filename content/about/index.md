@@ -11,4 +11,4 @@ First Robotics Competition (FRC), machining, a bit of music on occasion and most
 
 
 if you would like to hire me, call me at 503-810-4033 or email me at [jjbelezos@gmail.com](mail-to:jjbelezos@gmail.com).
-A copy of my resume can be [found here](https://jadonbelezos.com/resume.docx). Thanks for reading!!
+A copy of my resume can be [found here](resume.docx). Thanks for reading!!

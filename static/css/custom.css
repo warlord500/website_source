@@ -7,6 +7,12 @@
 	border: 4px black solid
 }
 
+.lastmod {
+	font-size:90%;
+	font-style: italic;
+	
+} 
+
 /*
 	look at themes/blackburn/layouts/share.html for where code came from
 */
