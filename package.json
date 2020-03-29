@@ -1,0 +1,23 @@
+{
+  "name": "jadon_belezos_blog",
+  "version": "1.0.0",
+  "description": "automation for my website",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/warlord500/website_source.git"
+  },
+  "author": "jadon belezos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/warlord500/website_source/issues"
+  },
+  "homepage": "https://github.com/warlord500/website_source#readme"
+}
