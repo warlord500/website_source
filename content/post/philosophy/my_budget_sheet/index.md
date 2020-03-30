@@ -26,7 +26,8 @@ In my particular case of working retail, my hours do vary sometimes by a lot fro
 To figure out how much I would expect to make in a week I build table. I put in how much I make in an hour in the top. 
 So If I were to one day to get a pay raise, all of the calculated numbers that depend on pay would auto Adjust. 
 
-![balance sheet](/images/balance_sheet.png)   
+{{< figure src="images/balance_sheet.png" title="first view" height="300px" link="budget_sheet.ods" >}}
+
 
 Then there is a tax rate below to account for how much I would actually make. 
 below there are two sort of tables, one with hours and pay for that week and finally pay for that week after taxes. 

@@ -3,3 +3,4 @@ deployment/
 themes/
 static/cgi-bin/fossil
 *.zip
+node_modules/
