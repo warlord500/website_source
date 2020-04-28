@@ -1,6 +1,6 @@
 +++
-title = "My_budget_sheet"
-date = "2020-04-24T12:40:07-07:00"
+title = "My budget sheet"
+date = "2020-04-26T12:40:07-07:00"
 description = "a quick tutorial on budget sheets"
 draft = false
 notoc = true  
@@ -26,7 +26,7 @@ In my particular case of working retail, my hours do sometimes vary by a lot fro
 To figure out how much I would expect to make in a week, I build a table. I put in how much I make in an hour at the top. 
 So If I were to one day to get a pay raise, all of the calculated numbers that depend on pay would auto-Adjust to meet the new value. 
 
-{{< figure src="images/balance_sheet.png" title="first view" height="300px" link="budget_sheet.ods" >}}
+{{< figure src="images/balance_sheet.png" title="first view" height="300px" link="budget_sheet.ods" class="figurine" >}}
 
 
 Then there is a tax rate below to account for how much I would actually make. 
