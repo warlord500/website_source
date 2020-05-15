@@ -88,7 +88,12 @@ disableLatLong = true
     weight = 5
     identifier = "about"
     url = "/about/"
- 
+  [[menu.main]] 
+    name = "programming posts"
+    pre = "<i class='fa fa-list fa-fw'></i>" # we need a different icon for the side
+    weight = 5
+    identifier = "programming"
+    url = "/tags/programming/ "
 	
 
 [social]

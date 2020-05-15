@@ -1,5 +1,5 @@
 +++
-title = "My budget sheet"
+title = "My Budget Sheet"
 date = "2020-04-26T12:40:07-07:00"
 description = "a quick tutorial on budget sheets"
 draft = false
