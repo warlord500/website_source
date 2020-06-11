@@ -10,6 +10,7 @@ topics = []
 custom_js = []
 custom_css = []
 +++
+there are many things worth far more than money. never forget that!!! 
 
 
 <!--more-->
