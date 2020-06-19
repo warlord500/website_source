@@ -8,7 +8,10 @@ canonifyurls = true
 paginate = 12
 theme="blackburn"
 enableGitInfo = true
-
+enableInlineShortCodes = true
+[outputs]
+	home = ["HTML","RSS","JSON"]
+	page = ["HTML", "RSS"]
 
 [markup]
   [markup.goldmark]
@@ -55,6 +58,7 @@ disableLatLong = true
   #highlightjs = "androidstudio"
   dateFormat = "02 Jan 2006, 15:04"
   custom_css = ["css/custom.css"]
+  custom_js = ["https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"]
   
 [menu]
 #  Shown in the side menu.
@@ -64,36 +68,37 @@ disableLatLong = true
     weight = 1
     identifier = "home"
     url = "/"
-	[[menu.main]]
+  [[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 2
+    identifier = "about"
+    url = "/about/"
+  [[menu.main]]
 	name = "Projects"
 	pre = "<i class='fa fa-home fa-fw'></i>"
-	weight = 2
+	weight = 3
 	identifier = "project"
 	url = "/project/"
   [[menu.main]]
     name = "Posts"
     pre = "<i class='fa fa-list fa-fw'></i>"
-    weight = 3
+    weight = 4
     identifier = "post"
     url = "/post/"
-	[[menu.main]]
+  [[menu.main]]
     name = "tags"
     pre = "<i class='fa fa-tags fa-fw'></i>"
-    weight = 4
+    weight = 5
     identifier = "tags"
     url = "/tags/"
-  [[menu.main]]
-    name = "About"
-    pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 5
-    identifier = "about"
-    url = "/about/"
   [[menu.main]] 
-    name = "programming posts"
-    pre = "<i class='fa fa-list fa-fw'></i>" # we need a different icon for the side
-    weight = 5
-    identifier = "programming"
-    url = "/tags/programming/ "
+	name = "search the blog"
+	pre = "<i class='fa fa-search fa-fw'></i>"
+	weight = "6"
+	identifier = "search"
+	url = "/search/"
+	
 	
 
 [social]
