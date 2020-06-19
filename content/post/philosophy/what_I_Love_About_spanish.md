@@ -1,5 +1,5 @@
 +++
-title = "What-I-Love-About-Spanish"
+title = "What I Love About Spanish"
 description = ""
 date = "2020-05-29T12:14:21-07:00"
 draft = false
