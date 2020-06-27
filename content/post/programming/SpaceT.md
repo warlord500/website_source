@@ -1,7 +1,7 @@
 +++
 date = "2016-03-06T21:33:45-08:00"
 title = "SpaceT"
-tags= ["programming","project"]
+tags= ["programming","project-update"]
 +++
 this weekend I have decided to devote my time to one of my older projects 
 known as SpaceT. SpaceT is game that combines the games, space invaders and tetris together.  

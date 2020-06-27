@@ -3,7 +3,7 @@ title = "Search"
 description = ""
 date = "2020-06-19T11:34:30-07:00"
 notoc = true  
-tags = ["search"]
+tags = []
 topics = []
 
 custom_js = []

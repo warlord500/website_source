@@ -11,7 +11,7 @@ enableGitInfo = true
 enableInlineShortCodes = true
 [outputs]
 	home = ["HTML","RSS","JSON"]
-	page = ["HTML", "RSS"]
+	page = ["HTML"]
 
 [markup]
   [markup.goldmark]
