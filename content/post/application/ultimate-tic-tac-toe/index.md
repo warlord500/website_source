@@ -25,5 +25,5 @@ if my instructions make no sense, the program should guide you to what you can't
     <p>you can place in big square: <span id="place"></span></p>
     <canvas id="gameBoard" width="500" height="500"></canvas>
     <button id="updateGameData">refresh the game</button>
-    <script src="/js/ultimate-tic-tac-toe.js"></script>
+    <script src="js/ultimate-tic-tac-toe.js"></script>
 </div>

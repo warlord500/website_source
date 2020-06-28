@@ -1,10 +1,10 @@
 +++
-title = "{{ replace .Name "-" " " | title }}"
+title = "{{   replace (replace .Name "_" " ") "-" " " | title }}"
 description = ""
 date = "{{ .Date }}"
 draft = true
 notoc = true  {{/*  no table of contents */}}
-tags = ["{{ path.Base .Dir}}"]
+tags = ["{{ path.Base .Dir }}"]
 topics = []
 
 custom_js = []

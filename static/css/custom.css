@@ -10,9 +10,12 @@
 .lastmod {
 	font-size:90%;
 	font-style: italic;
-	
 } 
 
+figure.figurine img {
+	border: 1px black solid
+	
+} 
 /*
 	look at themes/blackburn/layouts/share.html for where code came from
 */

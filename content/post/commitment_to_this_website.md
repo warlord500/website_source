@@ -1,7 +1,7 @@
 +++
 title = "Commitment_to_this_website"
-date = "2019-11-16T07:07:12-08:00"
-draft = true
+date = "2020-06-27T14:52:20-07:00"
+draft = false
 tags = []
 topics = []
 description = ""

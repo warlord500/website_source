@@ -20,5 +20,5 @@ a combination of performance and not quite perfect logic will update later and r
 	<button id="updateGameData">refresh the game</button>
 	<button id="showDictionary">show dictionary</button>
 	<button id="checkWord">check word</button>
-	<script src="/js/boggle.js"></script>
+	<script src="js/boggle.js"></script>
 </div>

@@ -28,7 +28,7 @@ function setup(){
 		window.gameData.words = this.responseText.split("\n");
 	}
   };
-  xhttp.open("GET", "/js/words.txt", true);
+  xhttp.open("GET", "js/words.txt", true);
   xhttp.send(); 
   drawBoard();
 } 
