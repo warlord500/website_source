@@ -4,3 +4,4 @@ themes/
 static/cgi-bin/fossil
 *.zip
 node_modules/
+package-lock.json
