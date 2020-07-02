@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "automation for my website",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^3.9.5"
+  },
   "devDependencies": {
     "gulp": "^4.0.2"
   },
