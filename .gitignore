@@ -1,7 +1,9 @@
 public/
+public_html/
 deployment/
 themes/
 static/cgi-bin/fossil
 *.zip
+*.tgz
 node_modules/
 package-lock.json

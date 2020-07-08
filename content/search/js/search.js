@@ -20,17 +20,19 @@ var searchFn = function () {
     var render = function (results) {
         results.sort(function (a, b) { return b.weight - a.weight; });
         for (var i = 0; i < results.length && i < limit; i += 1) {
-            var result = results[i].item;
-            var openAnchor = "<a href=\"" + result.permalink + "\" " +
+            const result = results[i].item;
+            const openAnchor = "<a href=\"" + result.permalink + "\" " +
                 "alt=\"" + result.showTitle + "\">";
-            var resultPane = "<div class=\"container\">" +
+				
+            let resultPane = "<div class=\"container\">" +
                 "<div class=\"row\">" +
-                openAnchor + result.showTitle + "</a></div>" +
-                "<div class=\"row\">" +
-                "<div class=\"col-12 col-md-4 col-lg-2\">" +
-                openAnchor + "<img src=\"" + result.image + "\" alt=\"" + result.showTitle + "\" class=\"rounded w-100\"></a></div>" +
-                ("<div class=\"col-12 col-md-8 col-lg-10\"><small>" + result.showDescription + "</small></div>") +
-                "</div></div>";
+                openAnchor + result.showTitle + "</a></div>"; 
+			/* 	if (result.image != "" | result.showDescription != "") {
+					resultPane += "<div class=\"row\">" +  openAnchor + "<img src=\"" + result.image + "\" alt=\"" + result.showTitle + "\" class=\"rounded w-100\"></a>" +
+					("<div class=\"col-12 col-md-8 col-lg-10\"><small>" + result.showDescription + "</small></div>") +
+					"</div></div>";
+				} */
+               
             $("#results").append(resultPane);
         }
     };
