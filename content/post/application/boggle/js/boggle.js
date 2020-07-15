@@ -25,7 +25,7 @@ function setup(){
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
-		window.gameData.words = this.responseText.split("\n");
+		window.gameData.words = this.responseText.split("\r\n");
 	}
   };
   xhttp.open("GET", "js/words.txt", true);
@@ -121,7 +121,7 @@ function checkWord(){
 		alert("found valid Word");
 	} else 
 	{
-		alert(word + "is not a word");
+		alert(word + " is not a word");
 	}
 	
 	drawBoard();
@@ -136,16 +136,19 @@ function countNumberOfValidWords(){
 	let count = 0;
 
 	let currentWord = window.gameData.words[0];
-	for(let i = 51; i < 60; i++){
+	const dictionaryLength  = window.gameData.words.length;
+	for(let i = 0; i < dictionaryLength; i++){
 		currentWord = window.gameData.words[i];
 		if (canCompleteWord(currentWord)){
 			count += 1;
 		}
+		console.log("current progress: "  + i + "/" + dictionaryLength);
 	}
 	document.getElementById("number_of_words").innerHTML = count;
 }
 
 function findLetter(Letter){
+	Letter = Letter.toLowerCase();
 		for(x = 0; x < WidthBlocks; x++){
 			for(y = 0; y < HeightBlocks; y++){
 				if(window.gameData.gameBoard[x][y].letter.toLowerCase() == Letter){
@@ -162,15 +165,15 @@ function findLetter(Letter){
 //duplicate letters.  
 //your best bet would be to make this recursive. 
 function canCompleteWord(currentWord){
-	let cords = findLetter(currentWord.charAt(0));
+	let cords = findLetter(currentWord.charAt(0).toLowerCase());
 	if(cords.x == -1) {
 		return false;
 	}
 	let currentLetter = "";
-	for(let x = 1; x < currentWord.length; x++){ // for letter in word:
-			currentLetter = currentWord.charAt(x);
+	for(let letterCount = 1; letterCount < currentWord.length; letterCount++){ // for letter in word:
+		currentLetter = currentWord.charAt(letterCount).toLowerCase();
 			adjacency: {
-				for(let xAdj = -1; xAdj < 2; x++){
+				for(let xAdj = -1; xAdj < 2; xAdj++){
 					for(let yAdj = -1; yAdj < 2; yAdj++){
 						if(xAdj == 0 && yAdj == 0){
 							continue;
@@ -178,7 +181,7 @@ function canCompleteWord(currentWord){
 						
 						if( cords.x + xAdj > 0 && cords.x + xAdj < WidthBlocks &&
 							cords.y + yAdj > 0 && cords.y + yAdj < WidthBlocks &&
-							window.gameData.gameBoard[cords.x + xAdj][cords.y + yAdj] == currentLetter){
+							window.gameData.gameBoard[cords.x + xAdj][cords.y + yAdj].letter.toLowerCase() == currentLetter){
 								
 								cords.x += xAdj;
 								cords.y += yAdj;

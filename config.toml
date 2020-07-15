@@ -8,8 +8,8 @@ canonifyurls = true
 paginate = 12
 theme="blackburn"
 enableGitInfo = true
-enableInlineShortCodes = true
-enableRobotsTXT = true
+#enableInlineShortCodes = true
+#enableRobotsTXT = true
 publishDir = "public_html"
 [outputs]
 	home = ["HTML","RSS","JSON"]
