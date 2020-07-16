@@ -1,5 +1,6 @@
 git add .
 git commit 
+git push
 #makes getting the password easier
 /d/portable\ applications/windows/keepass/keepass_classic/KeePass.exe &
 hugo --cleanDestinationDir
