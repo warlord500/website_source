@@ -6,5 +6,4 @@ rm  -R public_html/*
 #a solves the fossil reading the cgi script wrong due to incorrect line endings.
 #o overwrites the htaccess that auto spawns on the server
 tar -zxvf  404.tgz
-sed 
 chmod +x /home/jadonbel/public_html/cgi-bin/fossil.cgi
