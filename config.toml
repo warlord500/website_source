@@ -8,7 +8,7 @@ canonifyurls = true
 paginate = 12
 theme="blackburn"
 enableGitInfo = true
-#enableInlineShortCodes = true
+enableInlineShortCodes = true
 #enableRobotsTXT = true
 publishDir = "public_html"
 [outputs]

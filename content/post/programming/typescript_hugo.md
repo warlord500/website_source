@@ -1,5 +1,5 @@
 +++
-title = "Typescript Hugo"
+title = "Typescript and Hugo"
 description = ""
 date = "2020-07-20T14:58:27-07:00"
 draft = false
