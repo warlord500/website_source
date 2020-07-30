@@ -11,6 +11,7 @@ tags = ["{{ path.Base .Dir }}"]
 image = ""
 custom_js = []
 custom_css = []
+view_git = ["{{- .Name -}}/js/{{- .Name -}}.js"] 
 +++
 
 

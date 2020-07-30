@@ -5,6 +5,7 @@ draft = false
 tags = ["application","programming"]
 topics = []
 description = ""
+view_git = ["connect_four/js/connect_four.ts"]
 +++
 as a [daily coding problem](https://www.dailycodingproblem.com/) is to design connect four. 
 this page is the result of that endeavour. 
@@ -20,3 +21,4 @@ you can figure this one out without too much help.
 	<button id="updateGameData">refresh the game</button>
 	{{< typescriptBuild >}}
 </div>
+

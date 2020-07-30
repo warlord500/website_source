@@ -1,0 +1,20 @@
+﻿{{/* this is for employers or people just general interested in 
+	source code */}}
+
+
+{{ range .Params.view_git }}
+	{{ $github_account := trim $.Site.Social.github " " }}
+	{{ $href :=   printf "https://github.com/%s/website_source/tree/master/content/post/application/%s" $github_account . }}
+	<a class="SourceLink" href="{{ $href  }}">github source</a>
+{{ end }}
+
+
+{{/* I tried using the "view-source:" url scheme but it wont open on firefox 
+	thus having it auto download is better than nothing. */}}
+{{ range .Page.Resources.ByType "javascript" }}
+	<a class="sourceLink" href="{{ .Permalink }}">live source code</a>
+{{ end }}
+
+{{ range .Page.Resources.ByType "typescript" }}
+	<a class="sourceLink" href="{{- .Permalink -}}">live source code</a>
+{{ end }}

@@ -5,6 +5,7 @@ draft = false
 tags = ["application","programming"]
 topics = []
 description = ""
+view_git = ["boggle/js/boggle.js"]
 +++
 Creation of another game because of a daily coding problem.
 This web page is mostly complete the only part that currently doesn't work is the count words due to 
