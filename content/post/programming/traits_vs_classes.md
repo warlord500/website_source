@@ -1,7 +1,7 @@
 +++
-title = " rust Traits vs  c)+ Classes"
+title = " rust Traits vs  c++ Classes"
 description = ""
-date = "2020-06-27T14:52:20-07:00"
+date = "2020-08-05T20:23:20-07:00"
 draft = false
 notoc = true  
 tags = ["programming"]
