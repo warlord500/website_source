@@ -11,8 +11,9 @@ view_git = ["pong/js/pong.js"]
 <!--more-->
 
 <div id="application">
-	<p>blue won: <span id="top">0</span></p>
-	<p>green won: <span id="bottom">0</span></p>
+	<p>top score: <span id="top">0</span></p>
+	<p>bottom score: <span id="bottom">0</span></p>
+	<p id="events">&nbsp;</p>
 	<canvas id="gameBoard" width="700px" height="600px"></canvas>
 	<script src="js/main.js"></script>
 </div>
