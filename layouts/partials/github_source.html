@@ -11,6 +11,7 @@
 
 {{/* I tried using the "view-source:" url scheme but it wont open on firefox 
 	thus having it auto download is better than nothing. */}}
+	
 {{ range .Page.Resources.ByType "javascript" }}
 	<a class="sourceLink" href="{{ .Permalink }}">live source code</a>
 {{ end }}

@@ -17,3 +17,5 @@ view_git = ["pong/js/pong.js"]
 	<canvas id="gameBoard" width="700px" height="600px"></canvas>
 	<script src="js/main.js"></script>
 </div>
+
+some fixes thanks to [tom burris](https://github.com/Tombez).
