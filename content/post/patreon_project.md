@@ -2,7 +2,7 @@
 title = "Patreon Project"
 description = ""
 date = "2020-08-11T11:24:34-07:00"
-draft = true
+draft = false
 notoc = true  
 tags = []
 image = ""
