@@ -19,5 +19,5 @@ view_git = ["{{- .Name -}}/js/{{- .Name -}}.js"]
 
 <div id="application">
 	<canvas id="gameBoard" width="700px" height="600px"></canvas>
-	<script src="js/main.js"></script>
+	<script src="js/{{- .Name -}}.js"></script>
 </div>

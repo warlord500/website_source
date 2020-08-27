@@ -17,4 +17,6 @@ then you really arent programming at all.
 this leads to the point of this post. I am hoping to start making games people are willing to pay for.
 while being able to take on any projects that someone could want to be done. 
 
-with this i will start my patreon at [patreon.com/5hammer].
+with this i will start my patreon at [patreon.com/5hammer] .
+
+[patreon.com/5hammer]: https://patreon.com/5hammer

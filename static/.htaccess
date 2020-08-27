@@ -27,7 +27,7 @@ RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
 # php -- END cPanel-generated handler, do not edit
 
 # custom .htaccess below
-ErrorDocument 404 /404/index.html
+ErrorDocument 404 /404/
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.jadonbelezos\.com [NC]
 RewriteRule (.*) https://jadonbelezos.com/$1 [L,R=301]

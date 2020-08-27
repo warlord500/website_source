@@ -7,5 +7,6 @@ rm  -R public_html/*
 #o overwrites the htaccess that auto spawns on the server
 tar -zxvf  404.tgz
 # oddly i dont think this command works.
-#sed $'s/$/\r/'  /home/jadonbel/public_html/cgi-bin/fossil.cgi
-chmod +x /home/jadonbel/public_html/cgi-bin/fossil.cgi
+# the cgi file must be in unix line endings for fossil to work
+#tr -d "\r" < /home/jadonbel/public_html/cgi-bin/fossil.cgi 
+chmod +x /home/jadonbel/public_html/cgi-bin/fossil.cgi 
