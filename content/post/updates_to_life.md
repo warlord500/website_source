@@ -2,7 +2,7 @@
 title = "Updates to Life"
 description = ""
 date = "2020-10-03T20:46:53-07:00"
-draft = true
+draft = false
 notoc = true  
 tags = [""]
 image = ""
