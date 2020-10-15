@@ -5,7 +5,7 @@ draft = false
 tags = ["application","programming"]
 topics = []
 description = ""
-view_git = ["pong/js/pong.js"]
+view_git = ["pong/js/main.js"]
 +++
 <p>A very old classic rebuilt again. Have fun!!</p>
 <!--more-->
