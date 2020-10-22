@@ -1,3 +1,4 @@
+const multiplayerURL = '/post/application/ultimate-tic-tac-toe/multiplayer.php';
 //ok I know this is a rewBSite but to be honest, 
 // I only partially know what is going on in the other code.
 function setup(){
@@ -191,6 +192,15 @@ function drawBoard(){
 	drawBoard();
 } 
 
+function mulitplayerSwitch(e){
+	
+	const userName = window.prompt("enter a username to start:","user" +  Math.round(Math.random()*1000));
+	window.alert("your userName is " + userName);
+	fetch(multiplayerURL + "?UserName=" + encodeURIComponent(userName) + "&listUsers=True").then(res => res.text()).then(data => console.log(data));
+	
+	
+}
+
 window.addEventListener("load",function(){
 	window.gameData = {};
 	document.getElementById("updateGameData").addEventListener("click",function(){
@@ -199,5 +209,10 @@ window.addEventListener("load",function(){
 	});
 	document.getElementById("gameBoard").addEventListener("click",place);
 	setup();
+	//attempting to load user data.
+	fetch(multiplayerURL + '?listUsers=True').
+	then(res => res.text()).then(function(data){
+		console.log(data);
+	});
+	document.getElementById("switchMulti").addEventListener("click",mulitplayerSwitch);
 });
-

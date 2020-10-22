@@ -2,9 +2,16 @@
 	font-size: 75%;
 	font-weight: normal;
 }
-
 #gameBoard {
-	border: 4px black solid
+	border: 4px black solid;
+	padding:0;
+	margin: 0;
+}
+#multiplayer {
+	margin: 0;
+	padding:0;
+	float: right;
+	border: 1px black solid;
 }
 
 .lastmod {

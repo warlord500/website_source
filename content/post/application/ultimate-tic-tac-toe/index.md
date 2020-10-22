@@ -19,11 +19,19 @@ here is a recreation of ultimate tic-tac-toe for you to enjoy.
 if my instructions make no sense, the program should guide you to what you can't and can do. 
 
 <!--more--> 
-
+<a href="error.html">error_occurred</a>
 <div id="application">
     <p>current players turn: <span id="player"></span></p>
     <p>you can place in big square: <span id="place"></span></p>
+	<div id="multiplayer"> 
+				<button id="switchMulti">switch to multiplayer mode</button>
+			<h4>list of Active Users:</h4>
+		<ul id="listUsers">
+		</ul>
+	</div>
     <canvas id="gameBoard" width="500" height="500"></canvas>
-    <button id="updateGameData">refresh the game</button>
-    <script src="js/ultimate-tic-tac-toe.js"></script>
+	<div id="button">
+		<button id="updateGameData">refresh the game</button>
+	</div>
+	<script src="js/ultimate-tic-tac-toe.js"></script>
 </div>

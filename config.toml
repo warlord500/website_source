@@ -1,4 +1,4 @@
-baseurl = "https://jadonbelezos.com/"
+
 relativeURLs = true
 title = "jadon's blog"
 author = "jadon belezos"
@@ -10,7 +10,7 @@ theme="blackburn"
 enableGitInfo = true
 enableInlineShortCodes = true
 #enableRobotsTXT = true
-publishDir = "public_html"
+publishDir = "C:/wamp64/www/"
 [outputs]
 	home = ["HTML","RSS","JSON"]
 	page = ["HTML"]
