@@ -13,26 +13,46 @@ one person goes.
 then change board specifical
 
 at end of game reset. */
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
 
 	header("Content-Type: application/json");
 	if (isset($_GET["UserName"])){
-		$UserFile = fopen("userNames.txt", "a+");
+		$UserFile = fopen("userNames.txt", "a");
 		fwrite($UserFile, $_GET["UserName"] .  "\n", 20); // make sure they dont try to write huge userNames
-		//fwrite($UserFile, "testUser:");		
+		//echo "writing user to table" . $_GET["UserName"];
 		fclose($UserFile);
 	}
 	
 	if(isset($_GET["listUsers"])){
 		echo "[";	
-		$UserFile = fopen("userNames.txt", "rw");
+		$UserFile = fopen("userNames.txt", "c+");  // refer to https://www.w3schools.com/php/func_filesystem_fopen.asp
+		$previous = false;
 		 while (($currentUser = fgets($UserFile, 4096)) !== false) {
-			 echo  "{ \"user\":\"" . $currentUser . "\"},";
+			if ($previous == true){ echo ","; }
+			 echo  "{ \"user\":\"" . rTrim($currentUser) . "\"}";
+			 $previous = true;
 		 }
 		if(!feof($UserFile))  {
 			echo "something broke while trying to read the users file";
 		}	
 		echo "]";
-	} 
-	
+		fclose($UserFile);
+	}
+	if (isset($_GET("SessionId"]){
+		$SessionFile = fopen("sessionId","c+");
+		
+	}
 	
 ?>

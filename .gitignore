@@ -7,3 +7,4 @@ static/cgi-bin/fossil
 *.tgz
 node_modules/
 package-lock.json
+ content/post/application/ultimate-tic-tac-toe/error.html

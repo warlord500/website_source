@@ -196,9 +196,19 @@ function mulitplayerSwitch(e){
 	
 	const userName = window.prompt("enter a username to start:","user" +  Math.round(Math.random()*1000));
 	window.alert("your userName is " + userName);
-	fetch(multiplayerURL + "?UserName=" + encodeURIComponent(userName) + "&listUsers=True").then(res => res.text()).then(data => console.log(data));
+	fetch(multiplayerURL + "?UserName=" + encodeURIComponent(userName) + "&listUsers=True").then(res => res.text()).then(displayUserNames);
 	
-	
+}
+function displayUserNames(data){
+	console.log(data);
+	// for debugging purposes we convert the text here to json.
+	let UserData =  JSON.parse(data);
+	console.log(UserData);
+	const listUsers = document.getElementById("listUsers");
+	listUsers.innerHTML = "";
+	for(let index = 0; index < UserData.length; index++){
+		listUsers.innerHTML += "<li>" + UserData[index].user + "</li>";
+	}
 }
 
 window.addEventListener("load",function(){
@@ -211,8 +221,7 @@ window.addEventListener("load",function(){
 	setup();
 	//attempting to load user data.
 	fetch(multiplayerURL + '?listUsers=True').
-	then(res => res.text()).then(function(data){
-		console.log(data);
-	});
+	then(res => res.text())
+	.then(displayUserNames);
 	document.getElementById("switchMulti").addEventListener("click",mulitplayerSwitch);
 });

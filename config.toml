@@ -8,6 +8,7 @@ theme="blackburn"
 enableGitInfo = true
 enableInlineShortCodes = true
 #enableRobotsTXT = true
+relativeUrls = false
 publishDir = "C:/wamp64/www/"
 [outputs]
 	home = ["HTML","RSS","JSON"]
@@ -58,7 +59,7 @@ disableLatLong = true
   # CSS name for highlight.js
   #highlightjs = "androidstudio"
   dateFormat = "02 Jan 2006, 15:04"
-  custom_css = ["css/custom.css"]
+  custom_css = ["/css/custom.css"]
   custom_js = ["https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"]
   
 [menu]
