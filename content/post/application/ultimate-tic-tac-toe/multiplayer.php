@@ -37,7 +37,7 @@ at end of game reset. */
 		echo "]";
 		fclose($UserFile);
 	}
-	if (isset($_GET("SessionId"]){
+	if (isset($_GET["SessionId"])){
 		$SessionFile = fopen("sessionId","c+");
 		fclose($SessionFile);
 		
