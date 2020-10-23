@@ -39,6 +39,7 @@ at end of game reset. */
 	}
 	if (isset($_GET("SessionId"]){
 		$SessionFile = fopen("sessionId","c+");
+		fclose($SessionFile);
 		
 	}
 	

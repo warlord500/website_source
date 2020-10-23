@@ -5,6 +5,7 @@ themes/
 static/cgi-bin/fossil
 *.zip
 *.tgz
+*.gz
 node_modules/
 package-lock.json
  content/post/application/ultimate-tic-tac-toe/error.html
