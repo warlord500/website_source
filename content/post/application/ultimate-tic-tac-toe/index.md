@@ -5,6 +5,7 @@ draft = false
 tags = ["application","programming"]
 topics = []
 description = ""
+
 +++
 here is a recreation of ultimate tic-tac-toe for you to enjoy. 
 
@@ -34,4 +35,8 @@ if my instructions make no sense, the program should guide you to what you can't
 		<button id="updateGameData">refresh the game</button>
 	</div>
 	<script src="js/ultimate-tic-tac-toe.js"></script>
+	<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.mjs"
+></script>
 </div>
