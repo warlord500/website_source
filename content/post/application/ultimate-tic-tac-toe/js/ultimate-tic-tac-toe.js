@@ -64,11 +64,14 @@ function drawBoard(){
 		line(x + r, y - r, x - r, y + r);
 		line(x + r, y + r, x - r, y - r);
 	}
+	
 	function drawO(x, y, r) {
 		context.beginPath();
 		context.arc(x, y, r, 0, Math.PI * 2);
 		context.stroke();
 	}
+
+	// horizontal lines
 
 	for(let i = 1; i < 9; i++){
 		if (i % 3 == 0) {
@@ -81,6 +84,7 @@ function drawBoard(){
 		}
 
 	}
+	// vertical lines
 	for(let i = 1; i < 9; i++){
 		if (i % 3 == 0) {
 

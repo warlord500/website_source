@@ -2,13 +2,13 @@ title = "jadon's blog"
 author = "jadon belezos"
 # Shown in the side menu
 copyright = "author 2016. jadon belezos"
-canonifyurls = true
+canonifyurls = false
 paginate = 12
 theme="blackburn"
 enableGitInfo = true
 enableInlineShortCodes = true
 #enableRobotsTXT = true
-relativeUrls = false
+relativeUrls = true
 publishDir = "C:/wamp64/www/"
 [outputs]
 	home = ["HTML","RSS","JSON"]
