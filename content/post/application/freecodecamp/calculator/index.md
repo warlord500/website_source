@@ -6,8 +6,9 @@ draft = true
 notoc = true  
 tags = ["calculator"]
 image = ""
-custom_js = []
-custom_css = []
+custom_js = ["js/calc.js"]
+custom_css = ['custom.css']
+ 
 +++
 below is my calculator app for [freecodecamp];
 
@@ -15,22 +16,7 @@ below is my calculator app for [freecodecamp];
 
 
 <!-- remind myself to move this or change it somehow later on -->
-<style>
-	#calcButtons {
-		width: 50em;
-	}
-	#calcButtons .btn{
-		width: 10%;
-		padding: 1%;
-		margin: 1%;
-	}
-	#zero {
-		width: 48% !important;
-	}
-	
-</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/calc.js"></script>
 <div id="calc">
 <div id="display">
   <span id="mainDisplay"></span> = <span id="result"></span>

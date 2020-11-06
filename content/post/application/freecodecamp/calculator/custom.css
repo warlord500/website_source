@@ -1,0 +1,11 @@
+#calcButtons {
+	width: 50em;
+}
+#calcButtons .btn{
+	width: 10%;
+	padding: 1%;
+	margin: 1%;
+}
+#zero {
+	width: 48% !important;
+}
