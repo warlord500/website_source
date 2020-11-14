@@ -19,6 +19,6 @@ you can figure this one out without too much help.
 	<p>current players turn: <span id="player"></span></p>
 	<canvas id="gameBoard" width="700px" height="600px" style="border: 4px black solid"></canvas>
 	<button id="updateGameData">refresh the game</button>
-	{{< typescriptBuild >}}
+	{{< tsxBuild >}}
 </div>
 
