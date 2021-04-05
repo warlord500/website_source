@@ -9,6 +9,8 @@ image = ""
 custom_js = []
 custom_css = []
 +++
+i have always been facisinated with idea of a tiny home. 
+a home that specifically designed to be small and extremely effecient in every sense because it has to.
 
 
 <!--more-->
