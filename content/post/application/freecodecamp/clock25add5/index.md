@@ -6,7 +6,7 @@ draft = true
 notoc = true  
 tags = ["application"]
 
-
+MainPage = false
 # edit this!!!!
 image = ""
 custom_js = []
