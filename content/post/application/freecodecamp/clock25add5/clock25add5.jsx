@@ -34,12 +34,6 @@ class LikeButton extends React.Component {
 			<p id="timer-label">Session</p>
 		</div>
 	  );
-	
-    /*return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
-    ); */
   }
 }
 

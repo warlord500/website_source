@@ -2,7 +2,8 @@
 title = "Ipfs"
 description = ""
 date = "2021-04-05T12:11:13-07:00"
-draft = true
+draft = false
+
 notoc = true  
 tags = ["programming"]
 image = ""
@@ -32,4 +33,11 @@ this node  help converts ipfs  links to http the  now standard web protocol unti
 ipfs desktop creates and runs the node giving accessing to settings over ipfs. 
 
 to see my website click this link which will take you to the active version
-[ipfs.jadonbelezos.com] 
+[ipfs.jadonbelezos.com](ipns://ipfs.jadonbelezos.com)
+
+this will likelly send to another url similar to this <http://ipfs.jadonbelezos.com.ipns.localhost:8080>.
+if it does you know its working yeah!!
+
+[ipfs companion extension]:https://github.com/ipfs/ipfs-companion 
+[ipfs desktop]: https://github.com/ipfs/ipfs-desktop/releases
+>>>>>>> 5485d0285ae09bff3b65d3846a566d7731bf152a
