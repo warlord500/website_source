@@ -9,7 +9,8 @@ enableGitInfo = true
 enableInlineShortCodes = true
 #enableRobotsTXT = true
 relativeUrls = true
-publishDir = "C:/wamp64/www/"
+baseUrl="https://jadonbelezos.com/"
+publishDir = "D:/website_source/public_html/"
 [outputs]
 	home = ["HTML","RSS","JSON"]
 	page = ["HTML"]

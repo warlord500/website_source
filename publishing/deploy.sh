@@ -5,6 +5,8 @@ rm  -R public_html/*
 #ok my options on this are as follows
 #a solves the fossil reading the cgi script wrong due to incorrect line endings.
 #o overwrites the htaccess that auto spawns on the server
+mv 404.tgz domains/jadonbelezos.com
+cd domains/jadonbelezos.com
 tar -zxvf  404.tgz
 # oddly i dont think this command works.
 # the cgi file must be in unix line endings for fossil to work
