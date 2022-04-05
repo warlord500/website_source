@@ -15,3 +15,8 @@ ssh jadonbel@jadonbelezos.com "./deploy.sh"
 #echo "publishing to pinata";
 #read $LOGINKEY
 #ipfs.sh pin remote add $HASH  $LOGINKEY
+
+#paging api for facebook 
+# look up https://developers.facebook.com/docs/graph-api/overview#paging
+# our goal is to create a new facebook post with the webpage title 
+# for every publish
