@@ -2,7 +2,7 @@ git add .
 git commit 
 git push
 #makes getting the password easier
-/c/Program\ files\ \(x86\)/KeePass\ Password\ safe/KeePass.exe
+/c/Program\ files\ \(x86\)/KeePass\ Password\ safe/KeePass.exe &
 Hugo --cleanDestinationDir --destination "public_html/" --minify
 rm -R ./public_html/*.ts # cut down on archive space
 tar -zcvf 404.tgz public_html
