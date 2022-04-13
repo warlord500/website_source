@@ -14,10 +14,10 @@ custom_css = []
 view_git = ["bullet-hell/js/bullet-hell.js"] 
 +++
 
-
+i decided to rebuild my old shooter, game in the jumble of my life i think i lost the original source code!
 <!--more-->
-
+<!-- i need smarter more responsive way to handle the size of the canvas! -->
 <div id="application">
 	<canvas id="gameBoard" width="700px" height="600px"></canvas>
-	<script src="js/main.js"></script>
+	<script src="main.js"></script>
 </div>
