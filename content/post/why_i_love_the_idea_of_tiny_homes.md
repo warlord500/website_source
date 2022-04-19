@@ -1,7 +1,7 @@
 +++
 title = "Why I Love the Idea of Tiny Homes"
 description = ""
-date = "2021-01-23T15:49:51-08:00"
+date = "2022-04-19T16:49:51-08:00"
 draft = false
 notoc = true  
 tags = ["post"]
