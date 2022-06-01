@@ -8,7 +8,7 @@ theme="blackburn"
 enableGitInfo = true
 enableInlineShortCodes = true
 #enableRobotsTXT = true
-relativeUrls = true
+relativeUrls = false
 baseUrl="https://jadonbelezos.com/"
 publishDir = "D:/website_source/public_html/"
 [outputs]
