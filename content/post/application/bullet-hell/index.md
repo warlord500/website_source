@@ -18,6 +18,7 @@ i decided to rebuild my old shooter, game in the jumble of my life i think i los
 <!--more-->
 <!-- i need smarter more responsive way to handle the size of the canvas! -->
 <div id="application">
-	<canvas id="gameBoard" width="700px" height="600px"></canvas>
+	<img id="player" src="player.png" style="display: none" />
+	<canvas id="gameBoard" width="1200px" height="800px" style="position: relative; right:100px;" ></canvas>
 	<script src="main.js"></script>
 </div>
