@@ -3,7 +3,10 @@ title = "Ipfs"
 description = ""
 date = "2021-04-05T12:11:13-07:00"
 draft = false
+<<<<<<< HEAD
+=======
 
+>>>>>>> 5b87b9e3822263a5bde9419e9dee4261a737808b
 notoc = true  
 tags = ["programming"]
 image = ""
@@ -40,4 +43,3 @@ if it does you know its working yeah!!
 
 [ipfs companion extension]:https://github.com/ipfs/ipfs-companion 
 [ipfs desktop]: https://github.com/ipfs/ipfs-desktop/releases
->>>>>>> 5485d0285ae09bff3b65d3846a566d7731bf152a
