@@ -23,7 +23,7 @@ function load(){
 }
 function frameUpdate(){
 	//first handle controls!!
-	//updateBullets();
+	updateBullets();
 	//updateEnemies();
 	//second handle drawing
 	drawUpdate();
@@ -32,20 +32,34 @@ function frameUpdate(){
 
 
 function keyBoardUpdate(e){
+	const bulletSpeed = 15
 		console.log("the key being pressed is " + e.key);
 		if (e.key == "w") {
-			launchBullet({"my" :2, "mx" :0 });
+			launchBullet({"my" :-bulletSpeed, "mx" :0 });
 		}
 		if (e.key == "s") {
-			launchBullet({"my" :-2, "mx" :0 });
+			launchBullet({"my" :bulletSpeed, "mx" :0 });
 		}
 		if (e.key == "d") {
-			launchBullet({"my" :0, "mx" :2 });
+			launchBullet({"my" :0, "mx" :bulletSpeed });
 		}
 		if (e.key == "a") {
-			launchBullet({"my" :0, "mx" :-2 });
+			launchBullet({"my" :0, "mx" :-bulletSpeed });
 		}
-	
+		if (e.key == "f") {
+			launchBullet({"my" :-bulletSpeed, "mx" :0 });
+			launchBullet({"my" :bulletSpeed, "mx" :0 });
+			launchBullet({"my" :0, "mx" :bulletSpeed });
+			launchBullet({"my" :0, "mx" :-bulletSpeed });
+			//other directions
+			launchBullet({"my" :bulletSpeed, "mx" : bulletSpeed  });
+			launchBullet({"my" :bulletSpeed, "mx" : -bulletSpeed  });
+			launchBullet({"my" :-bulletSpeed, "mx" : bulletSpeed  });
+			launchBullet({"my" :-bulletSpeed, "mx" : -bulletSpeed  });
+			
+			
+			
+		}
 }
 
 
@@ -72,7 +86,13 @@ function launchBullet(bullet) {
 	
 	
 }
-
+function updateBullets(){
+	for(var i=0; i < gameData.bullets.length; i++){
+			const bullet = gameData.bullets[i];
+			bullet.x += bullet.mx;
+			bullet.y += bullet.my;
+		}
+}
 
 
 
