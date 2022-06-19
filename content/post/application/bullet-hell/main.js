@@ -10,6 +10,7 @@ window.gameData = {
 	"player" : {"x":150,"y": 150,"mx": 0, "my" :0, },
 	"enemies":[{ "x": 500, "y": 500}],
 	"bullets": [],
+	"enemyCounter" : 0,
 }
 function load(){
 	const canvas = document.getElementById("gameBoard");
@@ -24,7 +25,7 @@ function load(){
 function frameUpdate(){
 	//first handle controls!!
 	updateBullets();
-	//updateEnemies();
+	updateEnemies();
 	//second handle drawing
 	drawUpdate();
 	
@@ -72,10 +73,16 @@ function drawUpdate() {
 	const playerImg = document.getElementById("player");
 	ctx.drawImage(playerImg,gameData.player.x,gameData.player.y);
 	//ctx.Rect(0,0,100,100);
-		for(var i=0; i < gameData.bullets.length; i++){
+		for(let i=0; i < gameData.bullets.length; i++){
 			const bullet = gameData.bullets[i];
 			ctx.fillRect(bullet.x,bullet.y,25,25)
 		}
+		const enemyImg = document.getElementById("enemy");
+		for(let i=0; i < gameData.enemies.length; i++){
+			const enemy = gameData.enemies[i];
+			ctx.drawImage(enemyImg,enemy.x,enemy.y);
+		}
+		
 }
 
 
@@ -87,14 +94,60 @@ function launchBullet(bullet) {
 	
 }
 function updateBullets(){
-	for(var i=0; i < gameData.bullets.length; i++){
+	for(let i=0; i < gameData.bullets.length; i++){
 			const bullet = gameData.bullets[i];
 			bullet.x += bullet.mx;
 			bullet.y += bullet.my;
 		}
+	//collision with walls
+	const canvas = document.getElementById("gameBoard");
+	let i = 0;
+	while(i < gameData.bullets.length ) {
+		const bullet = gameData.bullets[i];
+		if(bullet.x < 0 || 
+		   bullet.y < 0 || 
+		   bullet.x > canvas.width || 
+		   bullet.y > canvas.height) {
+				gameData.bullets.splice(i,1);
+		   } else {
+			   i+=1;
+		   }
+		
+	}
+	//collision with enemies
+	
 }
 
-
+function updateEnemies(){
+	//spawn a enemy every so often up to certain amount
+	gameData.enemyCounter += 1;
+	if (gameData.enemyCounter > 30 && gameData.enemies.length < 5) {
+		const pickOneOfFour = Math.floor(Math.random() * 4);
+		var obj = {};
+		/*if pickOneOfFour = 0 {
+			obj.x = 100;
+			obj.y = 100;
+		
+		} else if pickOneOfFour = 1 {
+			obj.x =550
+			obj.y =600
+		
+		}*/
+		obj.x = 100;
+		obj.y = 200; 
+		obj.mx = 2;
+		obj.my = 3;
+		gameData.enemies.push(obj);
+		gameData.enemyCounter = 0;
+	}
+	
+	//update based on momuntem!
+	for(let i=0; i < gameData.enemies.length; i++){
+			const enemy = gameData.enemies[i];
+			enemy.x += enemy.mx;
+			enemy.y += enemy.my;
+		}
+}
 
 function updatePlayer(e) {
 	//this offset numbers are based on the size of the image divided by 2! 

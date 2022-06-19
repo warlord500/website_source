@@ -9,6 +9,9 @@ image = ""
 custom_js = []
 custom_css = []
 +++
+being paid hourly doesnt seem like a good system of compensation. but other systems could be worse!
+some bosses might expect you to work at insanley high level. however inconsistently you are not compensated to wrok harder. 
 
+ however the incident. 
 
 <!--more-->
