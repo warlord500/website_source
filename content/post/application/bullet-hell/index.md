@@ -1,8 +1,8 @@
 +++
 title = "Bullet Hell"
 description = ""
-date = "2020-08-27T02:18:34-07:00"
-draft = true
+date = "2022-06-27T02:18:34-07:00"
+draft = false
 notoc = true  
 tags = ["programming"]
 
@@ -14,8 +14,10 @@ custom_css = []
 view_git = ["bullet-hell/js/bullet-hell.js"] 
 +++
 
-i decided to rebuild my old shooter, game in the jumble of my life i think i lost the original source code!
+i decided to rebuild my old shooter, game in the jumble of my life i lost the original source code!
 <!--more-->
+current there is more work to be done but so far, you can move with the mouse and use wasd to shoot bullets. 
+as well as special cast bullets using f key!
 <!-- i need smarter more responsive way to handle the size of the canvas! -->
 <div id="application">
 	<img id="player" src="player.png" style="display: none" />
