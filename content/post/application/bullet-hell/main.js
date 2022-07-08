@@ -16,18 +16,19 @@ function load(){
 	const canvas = document.getElementById("gameBoard");
 	console.log("running loading function");
 	setInterval(frameUpdate,1000/30);
-	drawUpdate();
+	drawUpdate(canvas);
 	canvas.addEventListener("mousemove",updatePlayer)
 	//get all keypresses
 	document.addEventListener("keypress", keyBoardUpdate);
 
 }
 function frameUpdate(){
+	const canvas = document.getElementById("gameBoard");
 	//first handle controls!!
-	updateBullets();
-	updateEnemies();
+	updateBullets(canvas);
+	updateEnemies(canvas);
 	//second handle drawing
-	drawUpdate();
+	drawUpdate(canvas);
 	
 }
 
@@ -64,9 +65,9 @@ function keyBoardUpdate(e){
 }
 
 
-function drawUpdate() {
+function drawUpdate(canvas) {
 	
-	const canvas = document.getElementById("gameBoard");
+	
 	const ctx = canvas.getContext("2d");
 	//console.log("drawing screen");
 	ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -93,14 +94,13 @@ function launchBullet(bullet) {
 	
 	
 }
-function updateBullets(){
+function updateBullets(canvas){
 	for(let i=0; i < gameData.bullets.length; i++){
 			const bullet = gameData.bullets[i];
 			bullet.x += bullet.mx;
 			bullet.y += bullet.my;
 		}
 	//collision with walls
-	const canvas = document.getElementById("gameBoard");
 	let i = 0;
 	while(i < gameData.bullets.length ) {
 		const bullet = gameData.bullets[i];
@@ -118,7 +118,7 @@ function updateBullets(){
 	
 }
 
-function updateEnemies(){
+function updateEnemies(canvas){
 	//spawn a enemy every so often up to certain amount
 	gameData.enemyCounter += 1;
 	if (gameData.enemyCounter > 30 && gameData.enemies.length < 5) {
@@ -135,8 +135,8 @@ function updateEnemies(){
 		}*/
 		obj.x = 100;
 		obj.y = 200; 
-		obj.mx = 2;
-		obj.my = 3;
+		obj.mx = 14*(Math.random()-0.5);
+		obj.my = 14*(Math.random()-0.5);
 		gameData.enemies.push(obj);
 		gameData.enemyCounter = 0;
 	}
@@ -146,7 +146,36 @@ function updateEnemies(){
 			const enemy = gameData.enemies[i];
 			enemy.x += enemy.mx;
 			enemy.y += enemy.my;
+			
+			if(enemy.x < 0 || 
+			   enemy.y < 0 || 
+			   enemy.x > canvas.width ||
+			   enemy.y > canvas.height) {
+				   
+				   if(enemy.x < 0){  
+							enemy.x = 1;
+							enemy.mx = bounce(enemy.mx);
+				   }
+				   if(enemy.y < 0){  
+							enemy.y = 1; 
+							enemy.my = bounce(enemy.my);
+							}
+				   if(enemy.x > canvas.width) { 
+								enemy.x = canvas.width -1; 
+								enemy.mx = bounce(enemy.mx);
+								}
+				   if(enemy.y > canvas.height){ 
+								enemy.y = canvas.height-1; 
+								enemy.my = bounce(enemy.my);
+								}		   	
 		}
+		
+	}
+		
+}
+function bounce(momuntem){
+	const delta = 7*(Math.random() - 0.5);
+	return Math.min(10*-Math.sign(momuntem) ,-1.05*momuntem ) + delta; 
 }
 
 function updatePlayer(e) {
