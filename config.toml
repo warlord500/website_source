@@ -9,7 +9,7 @@ enableGitInfo = true
 enableInlineShortCodes = true
 #enableRobotsTXT = true
 relativeUrls = false
-#baseUrl="https://jadonbelezos.com/"
+baseUrl="https://jadonbelezos.com/"
 publishDir = "D:/website_source/public_html/"
 [outputs]
 	home = ["HTML","RSS","JSON"]
