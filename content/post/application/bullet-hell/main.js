@@ -9,6 +9,7 @@ window.gameData = {
 	
 	"player" : {"x":150,"y": 150,"mx": 0, "my" :0, },
 	"enemies":[{ "x": 500, "y": 500}],
+	"enemy_bullets" : [],
 	"bullets": [],
 	"enemyCounter" : 0,
 }
@@ -74,6 +75,7 @@ function drawUpdate(canvas) {
 	const playerImg = document.getElementById("player");
 	ctx.drawImage(playerImg,gameData.player.x,gameData.player.y);
 	//ctx.Rect(0,0,100,100);
+		ctx.fillStyle="#000000"
 		for(let i=0; i < gameData.bullets.length; i++){
 			const bullet = gameData.bullets[i];
 			ctx.fillRect(bullet.x,bullet.y,25,25)
@@ -83,6 +85,12 @@ function drawUpdate(canvas) {
 			const enemy = gameData.enemies[i];
 			ctx.drawImage(enemyImg,enemy.x,enemy.y);
 		}
+		ctx.fillStyle="#00cc00";
+		for(let i=0; i < gameData.enemy_bullets.length; i++){
+			const bullet = gameData.enemy_bullets[i];
+			ctx.fillRect(bullet.x,bullet.y,25,25)
+		}
+		
 		
 }
 
@@ -115,28 +123,38 @@ function updateBullets(canvas){
 		
 	}
 	//collision with enemies
+	for(let i = 0; i < gameData.enemy_bullets.length; i++){
+			const bullet = gameData.enemy_bullets[i];
+			bullet.x += bullet.mx;
+			bullet.y += bullet.my;
 	
+		}
+		
+	let j = 0;
+	while(j < gameData.enemy_bullets.length ) {
+		const bullet = gameData.enemy_bullets[j];
+		if(bullet.x < 0 || 
+		   bullet.y < 0 || 
+		   bullet.x > canvas.width || 
+		   bullet.y > canvas.height) {
+				gameData.enemy_bullets.splice(j,1);
+		   } else {
+			   j+=1;
+		   }
+	}
 }
 
 function updateEnemies(canvas){
 	//spawn a enemy every so often up to certain amount
 	gameData.enemyCounter += 1;
 	if (gameData.enemyCounter > 30 && gameData.enemies.length < 5) {
-		const pickOneOfFour = Math.floor(Math.random() * 4);
-		var obj = {};
-		/*if pickOneOfFour = 0 {
-			obj.x = 100;
-			obj.y = 100;
-		
-		} else if pickOneOfFour = 1 {
-			obj.x =550
-			obj.y =600
-		
-		}*/
-		obj.x = 100;
-		obj.y = 200; 
-		obj.mx = 14*(Math.random()-0.5);
-		obj.my = 14*(Math.random()-0.5);
+		var obj = {
+			x: Math.random() *canvas.width,
+			y: Math.random()* canvas.height,
+			mx: 14*(Math.random()-0.5),
+			my: 14*(Math.random()-0.5),
+			bulletCount: 0,
+		};
 		gameData.enemies.push(obj);
 		gameData.enemyCounter = 0;
 	}
@@ -146,33 +164,73 @@ function updateEnemies(canvas){
 			const enemy = gameData.enemies[i];
 			enemy.x += enemy.mx;
 			enemy.y += enemy.my;
+			enemy.bulletCount += 1;
 			
-			if(enemy.x < 0 || 
-			   enemy.y < 0 || 
-			   enemy.x > canvas.width ||
-			   enemy.y > canvas.height) {
 				   
-				   if(enemy.x < 0){  
-							enemy.x = 1;
-							enemy.mx = bounce(enemy.mx);
-				   }
-				   if(enemy.y < 0){  
-							enemy.y = 1; 
-							enemy.my = bounce(enemy.my);
-							}
-				   if(enemy.x > canvas.width) { 
-								enemy.x = canvas.width -1; 
-								enemy.mx = bounce(enemy.mx);
-								}
-				   if(enemy.y > canvas.height){ 
-								enemy.y = canvas.height-1; 
-								enemy.my = bounce(enemy.my);
-								}		   	
-		}
+		   if(enemy.x < 0){  
+					enemy.x = 1;
+					enemy.mx = bounce(enemy.mx);
+		   }
+		   if(enemy.y < 0){  
+					enemy.y = 1; 
+					enemy.my = bounce(enemy.my);
+					}
+					
+		   if(enemy.x > canvas.width) { 
+						enemy.x = canvas.width -1; 
+						enemy.mx = bounce(enemy.mx);
+						}
+		   if(enemy.y > canvas.height){ 
+						enemy.y = canvas.height-1; 
+						enemy.my = bounce(enemy.my);
+						}		   
+		//distance from enemy and player. 
+		//sin and cosin for angle? 
+		// angle multiplied by speed. 
 		
+		if (enemy.bulletCount > 90 ) {
+			const opposite = (enemy.y-(gameData.player.y -playerCenterY));
+			const adjacent = (enemy.x-(gameData.player.x-playerCenterX));
+			
+			// atan only accounts for two of the quadrants. 
+			//thus we must compensate for that with code below
+			let deltaAngle = 0;
+			if(Math.sign(opposite) == -1){
+				if(Math.sign(adjacent) == -1){
+					deltaAngle = -Math.PI;
+				} else {
+					deltaAngle = Math.PI;
+				}
+			}  
+			
+			//cant divide by zero thus adjaceny if.
+			let mx = 0;
+			let my = 0;
+			
+			if(adjacent == 0){
+				//is bullet going straight up or down?
+				my = Math.sign(opposite)*10;
+			} else {
+			
+				const angle = Math.atan(opposite/adjacent) + deltaAngle;
+				mx = Math.cos(angle)*10; 
+				my = Math.sin(angle)*10;
+			}
+			 
+			 enemy.bulletCount = 0;
+			gameData.enemy_bullets.push({ 
+				x: enemy.x, 
+				y: enemy.y,
+				mx: mx,
+				my: my,
+			});
+			
+		}
 	}
 		
 }
+// enemies should bounce against a wall. 
+// 
 function bounce(momuntem){
 	const delta = 7*(Math.random() - 0.5);
 	return Math.min(10*-Math.sign(momuntem) ,-1.05*momuntem ) + delta; 
