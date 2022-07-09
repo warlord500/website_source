@@ -14,6 +14,8 @@ git submodule update
 
 make sure the blackburn theme comes from 
 [warlord500/blackburn]
+it contains small quality of life updates that the original developer has decided to not include in. 
+i cant claim i came up with the theme i have used to help build the website
 
 
 

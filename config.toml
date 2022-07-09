@@ -8,8 +8,9 @@ theme="blackburn"
 enableGitInfo = true
 enableInlineShortCodes = true
 #enableRobotsTXT = true
-relativeUrls = true
-publishDir = "C:/wamp64/www/"
+relativeUrls = false
+baseUrl="https://jadonbelezos.com/"
+publishDir = "D:/website_source/public_html/"
 [outputs]
 	home = ["HTML","RSS","JSON"]
 	page = ["HTML"]
@@ -106,6 +107,12 @@ disableLatLong = true
 	weight = "6"
 	identifier = "ipfs"
 	url = "/ipns/ipfs.jadonbelezos.com/"
+[[menu.main]]
+    name = "programming"
+    pre = "<i class='fa fa-tags fa-fw'></i>"
+    weight = 5
+    identifier = "programming_list"
+    url = "/tags/programming/"
    
 	
 	
