@@ -2,8 +2,10 @@
 console.log("game loading up");
 window.addEventListener('load', load);
 const maxSpeed = 3;
-const playerCenterX = -62;
-const playerCenterY = -46;
+const playerCenterX = 62;
+const playerCenterY = 46;
+const bulletWidth = 25;
+const bulletHeight = 25;
 
 window.gameData = {
 	
@@ -30,6 +32,7 @@ function frameUpdate(){
 	updateEnemies(canvas);
 	//second handle drawing
 	drawUpdate(canvas);
+	collisions();
 	
 }
 
@@ -78,7 +81,7 @@ function drawUpdate(canvas) {
 		ctx.fillStyle="#000000"
 		for(let i=0; i < gameData.bullets.length; i++){
 			const bullet = gameData.bullets[i];
-			ctx.fillRect(bullet.x,bullet.y,25,25)
+			ctx.fillRect(bullet.x,bullet.y,bulletWidth,bulletHeight);
 		}
 		const enemyImg = document.getElementById("enemy");
 		for(let i=0; i < gameData.enemies.length; i++){
@@ -96,8 +99,8 @@ function drawUpdate(canvas) {
 
 
 function launchBullet(bullet) {
-	bullet.x=gameData.player.x-playerCenterX;
-	bullet.y=gameData.player.y-playerCenterY;
+	bullet.x=gameData.player.x+playerCenterX;
+	bullet.y=gameData.player.y+playerCenterY;
 	gameData.bullets.push(bullet);
 	
 	
@@ -188,9 +191,9 @@ function updateEnemies(canvas){
 		//sin and cosin for angle? 
 		// angle multiplied by speed. 
 		
-		if (enemy.bulletCount > 90 ) {
-			const opposite = (enemy.y-(gameData.player.y -playerCenterY));
-			const adjacent = (enemy.x-(gameData.player.x-playerCenterX));
+		if (enemy.bulletCount > 45 ) {
+			const opposite = (enemy.y-(gameData.player.y+playerCenterY));
+			const adjacent = (enemy.x-(gameData.player.x+playerCenterX));
 			
 			// atan only accounts for two of the quadrants. 
 			//thus we must compensate for that with code below
@@ -236,11 +239,59 @@ function bounce(momuntem){
 	return Math.min(10*-Math.sign(momuntem) ,-1.05*momuntem ) + delta; 
 }
 
+
+function collisions(){
+	
+	//enemy bullets collide with player!!
+	
+	let j = 0;
+	 while(j < gameData.enemy_bullets.length ) {
+		const bullet = gameData.enemy_bullets[j];
+		if(bullet.x > gameData.player.x && 
+		   bullet.x < gameData.player.x + playerCenterX*2 &&
+		   bullet.y > gameData.player.y &&
+		   bullet.y < gameData.player.y + playerCenterY*2  ||
+		   bullet.x + ) {
+				gameData.enemy_bullets.splice(j,1);
+				//remove player health!
+				//update dispaly for that!
+		   } else {
+			   j+=1;
+		   }
+	}
+	
+	//player bullets collide with enemies?
+/*	    j = 0;
+	let i = 0;
+
+	 while(j < gameData.bullets.length ) {
+		 const bullet = gameData.enemy_bullets[j];
+		 while i < gameData.enemies.length){
+			 const enemy = gameData.enemies[j];
+			 if(bullet.x > enemy.x && 
+				bullet.x < enemy.x + playerCenterX*2 &&
+				bullet.y > enemy.player.y &&
+				bullet.y < gameData.player.y + playerCenterY*2) {
+			   
+			 
+		 }
+		
+		
+				gameData.enemy_bullets.splice(j,1);
+				//remove player health!
+				//update dispaly for that!
+		   } else {
+			   j+=1;
+		   }
+	}
+	*/
+}
+
 function updatePlayer(e) {
 	//this offset numbers are based on the size of the image divided by 2! 
 	// so that you are set at the center!
-		gameData.player.x = e.offsetX+playerCenterX;
-		gameData.player.y = e.offsetY+playerCenterY;
+		gameData.player.x = e.offsetX-playerCenterX;
+		gameData.player.y = e.offsetY-playerCenterY;
 
 	
 }
