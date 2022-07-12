@@ -6,11 +6,14 @@ const playerCenterX = 62;
 const playerCenterY = 46;
 const bulletWidth = 25;
 const bulletHeight = 25;
+const enemyWidth  =   53; 
+const enemyHeight =   46;
+
 
 window.gameData = {
 	
 	"player" : {"x":150,"y": 150,"mx": 0, "my" :0, },
-	"enemies":[{ "x": 500, "y": 500}],
+	"enemies":[],
 	"enemy_bullets" : [],
 	"bullets": [],
 	"enemyCounter" : 0,
@@ -39,7 +42,7 @@ function frameUpdate(){
 
 function keyBoardUpdate(e){
 	const bulletSpeed = 15
-		console.log("the key being pressed is " + e.key);
+		//console.log("the key being pressed is " + e.key);
 		if (e.key == "w") {
 			launchBullet({"my" :-bulletSpeed, "mx" :0 });
 		}
@@ -83,10 +86,13 @@ function drawUpdate(canvas) {
 			const bullet = gameData.bullets[i];
 			ctx.fillRect(bullet.x,bullet.y,bulletWidth,bulletHeight);
 		}
+		ctx.fillStyle="#ff0000"
 		const enemyImg = document.getElementById("enemy");
 		for(let i=0; i < gameData.enemies.length; i++){
 			const enemy = gameData.enemies[i];
+			
 			ctx.drawImage(enemyImg,enemy.x,enemy.y);
+			ctx.fillRect(enemy.x,enemy.y-10,enemy.health*15,10);
 		}
 		ctx.fillStyle="#00cc00";
 		for(let i=0; i < gameData.enemy_bullets.length; i++){
@@ -157,6 +163,7 @@ function updateEnemies(canvas){
 			mx: 14*(Math.random()-0.5),
 			my: 14*(Math.random()-0.5),
 			bulletCount: 0,
+			health: 10,
 		};
 		gameData.enemies.push(obj);
 		gameData.enemyCounter = 0;
@@ -243,15 +250,12 @@ function bounce(momuntem){
 function collisions(){
 	
 	//enemy bullets collide with player!!
-	
+	const bulletHeightObj = {width: bulletWidth, height: bulletHeight};
+	const playerHeightObj = {width: playerCenterX*2, height: playerCenterY*2};
 	let j = 0;
 	 while(j < gameData.enemy_bullets.length ) {
 		const bullet = gameData.enemy_bullets[j];
-		if(bullet.x > gameData.player.x && 
-		   bullet.x < gameData.player.x + playerCenterX*2 &&
-		   bullet.y > gameData.player.y &&
-		   bullet.y < gameData.player.y + playerCenterY*2  ||
-		   bullet.x + ) {
+		if(doOverlap(bullet,gameData.player,bulletHeightObj,playerHeightObj)) {
 				gameData.enemy_bullets.splice(j,1);
 				//remove player health!
 				//update dispaly for that!
@@ -260,31 +264,46 @@ function collisions(){
 		   }
 	}
 	
+	const enemyHeightObj = {width: enemyWidth, height: enemyHeight};
 	//player bullets collide with enemies?
-/*	    j = 0;
+	  
+	let x = 0;
 	let i = 0;
-
-	 while(j < gameData.bullets.length ) {
-		 const bullet = gameData.enemy_bullets[j];
-		 while i < gameData.enemies.length){
-			 const enemy = gameData.enemies[j];
-			 if(bullet.x > enemy.x && 
-				bullet.x < enemy.x + playerCenterX*2 &&
-				bullet.y > enemy.player.y &&
-				bullet.y < gameData.player.y + playerCenterY*2) {
+	 while(x < gameData.bullets.length ) {
+		 const bullet = gameData.enemy_bullets[x];
+		 i = 0;
+		 while (i < gameData.enemies.length){
+			 const enemy = gameData.enemies[i];
+			 if(doOverlap(bullet,enemy,bulletHeightObj,enemyHeightObj)) {
 			   
-			 
-		 }
 		
-		
-				gameData.enemy_bullets.splice(j,1);
+				gameData.bullets.splice(j,1);
+				enemy.health -= 1;
 				//remove player health!
 				//update dispaly for that!
 		   } else {
-			   j+=1;
+			   i+=1;
 		   }
+		 }
+		x += 1;
 	}
-	*/
+	function doOverlap(rect1,rect2,hw1,hw2){
+        // If one rectangle is on left side of other
+        if ((rect1.x > (rect2.x + hw2.width)) || 
+			(rect2.x > (rect1.x + hw1.width  ))) {
+            return false;
+        }
+		// i am not sure why this needs to be not true for it to work! 
+		const oAt = !((rect1.y + hw1.height) > rect2.y);
+		const tAo = !((rect2.y + hw2.height) > rect1.y);
+        // If one rectangle is above other
+        if ( oAt|| tAo ) {
+            return false;
+        }
+ 
+        return true;
+	}
+	
 }
 
 function updatePlayer(e) {
