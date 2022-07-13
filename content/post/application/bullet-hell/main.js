@@ -92,7 +92,7 @@ function drawUpdate(canvas) {
 			const enemy = gameData.enemies[i];
 			
 			ctx.drawImage(enemyImg,enemy.x,enemy.y);
-			ctx.fillRect(enemy.x,enemy.y-10,enemy.health*15,10);
+			ctx.fillRect(enemy.x,enemy.y-10,enemy.health*16,10);
 		}
 		ctx.fillStyle="#00cc00";
 		for(let i=0; i < gameData.enemy_bullets.length; i++){
@@ -163,7 +163,7 @@ function updateEnemies(canvas){
 			mx: 14*(Math.random()-0.5),
 			my: 14*(Math.random()-0.5),
 			bulletCount: 0,
-			health: 10,
+			health: 3,
 		};
 		gameData.enemies.push(obj);
 		gameData.enemyCounter = 0;
@@ -264,45 +264,54 @@ function collisions(){
 		   }
 	}
 	
-	const enemyHeightObj = {width: enemyWidth, height: enemyHeight};
+	const enemyHeightObj = {width: enemyWidth*1.2, height: enemyHeight*1.2};
 	//player bullets collide with enemies?
 	  
 	let x = 0;
 	let i = 0;
 	 while(x < gameData.bullets.length ) {
-		 const bullet = gameData.enemy_bullets[x];
+		 const bullet = gameData.bullets[x];
 		 i = 0;
 		 while (i < gameData.enemies.length){
 			 const enemy = gameData.enemies[i];
 			 if(doOverlap(bullet,enemy,bulletHeightObj,enemyHeightObj)) {
 			   
 		
-				gameData.bullets.splice(j,1);
+				gameData.bullets.splice(x,1);
 				enemy.health -= 1;
+				if(enemy.health == 0){
+					gameData.enemies.splice(i,1);
+				}
 				//remove player health!
 				//update dispaly for that!
+				break;
 		   } else {
 			   i+=1;
 		   }
 		 }
 		x += 1;
 	}
-	function doOverlap(rect1,rect2,hw1,hw2){
+	function doOverlap(a,b,hw1,hw2){
         // If one rectangle is on left side of other
-        if ((rect1.x > (rect2.x + hw2.width)) || 
-			(rect2.x > (rect1.x + hw1.width  ))) {
-            return false;
-        }
-		// i am not sure why this needs to be not true for it to work! 
-		const oAt = !((rect1.y + hw1.height) > rect2.y);
-		const tAo = !((rect2.y + hw2.height) > rect1.y);
-        // If one rectangle is above other
-        if ( oAt|| tAo ) {
-            return false;
-        }
- 
-        return true;
+		const aLeftOfB = ((a.x + hw1.height) < b.x);
+		const aRightOfB = (a.x > (b.x +hw2.width));
+		const aAboveB = (a.y > (b.y + hw2.height));
+		const aBelowB = ((a.y + hw1.height) < b.y);
+		return !( aLeftOfB || aRightOfB || aAboveB || aBelowB );
+	
+      
+        
 	}
+	/*public boolean rectanglesIntersect( 
+    float minAx, float minAy, float maxAx, float maxAy,
+    float minBx, float minBy, float maxBx, float maxBy ) {
+    boolean aLeftOfB = maxAx < minBx;
+    boolean aRightOfB = minAx > maxBx;
+    boolean aAboveB = minAy > maxBy;
+    boolean aBelowB = maxAy < minBy;
+
+    return !( aLeftOfB || aRightOfB || aAboveB || aBelowB );
+}*/
 	
 }
 
