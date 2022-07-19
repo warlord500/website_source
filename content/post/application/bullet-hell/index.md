@@ -22,6 +22,7 @@ as well as special cast bullets using f key!
 <div id="application">
 	<img id="player" src="player.png" style="display: none" />
 	<img id="enemy" src="enemy.png" style="display: none" />
+	<p> player health: <span id="playerHealth">50</span></p>
 	<canvas id="gameBoard" width="1200px" height="800px" style="position: relative; right:100px;" ></canvas>
 	<script src="main.js"></script>
 </div>

@@ -12,7 +12,7 @@ const enemyHeight =   46;
 
 window.gameData = {
 	
-	"player" : {"x":150,"y": 150,"mx": 0, "my" :0, },
+	"player" : {"x":150,"y": 150,"mx": 0, "my" :0, "health":50 },
 	"enemies":[],
 	"enemy_bullets" : [],
 	"bullets": [],
@@ -258,7 +258,8 @@ function collisions(){
 		if(doOverlap(bullet,gameData.player,bulletHeightObj,playerHeightObj)) {
 				gameData.enemy_bullets.splice(j,1);
 				//remove player health!
-				//update dispaly for that!
+				gameData.player.health -= 1;
+				document.getElementById("playerHealth").innerHTML = gameData.player.health;
 		   } else {
 			   j+=1;
 		   }
