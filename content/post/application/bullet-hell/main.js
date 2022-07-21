@@ -17,6 +17,7 @@ window.gameData = {
 	"enemy_bullets" : [],
 	"bullets": [],
 	"enemyCounter" : 0,
+    "medKits" : [{"x" : 100,"y":100}]
 }
 function load(){
 	const canvas = document.getElementById("gameBoard");
@@ -98,6 +99,11 @@ function drawUpdate(canvas) {
 		for(let i=0; i < gameData.enemy_bullets.length; i++){
 			const bullet = gameData.enemy_bullets[i];
 			ctx.fillRect(bullet.x,bullet.y,25,25)
+		}
+		ctx.fillStyle="#ff0000"
+		for(let i=0; i < gameData.medKits.length; i++){
+			const medKit = gameData.medKits[i];
+			ctx.fillRect(medKit.x,medKit.y,25,25)
 		}
 		
 		
@@ -292,6 +298,10 @@ function collisions(){
 		 }
 		x += 1;
 	}
+	/*const medKitHeigh
+	for(let i = 0; i < medkits.length; i++){
+		
+	}*/
 	function doOverlap(a,b,hw1,hw2){
         // If one rectangle is on left side of other
 		const aLeftOfB = ((a.x + hw1.height) < b.x);
