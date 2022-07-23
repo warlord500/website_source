@@ -12,4 +12,4 @@ tar -zxvf  404.tgz
 # oddly i dont think this command works.
 # the cgi file must be in unix line endings for fossil to work
 #tr -d "\r" < /home/jadonbel/public_html/cgi-bin/fossil.cgi 
-chmod +x /home/jadonbel/public_html/cgi-bin/fossil.cgi 
+chmod +x /home/jadonbel/domains/jadonbelezos.com/cgi-bin/fossil.cgi 
