@@ -9,7 +9,7 @@ const playerCenterY = 46;
 const bulletWidth = 25;
 const bulletHeight = 25;
 
-const medKitHeight = 25;
+const medkitHeight = 25;
 const medkitWidth = 25;
 
 const enemyWidth  =   53; 
@@ -23,8 +23,8 @@ window.gameData = {
 	"enemy_bullets" : [],
 	"bullets": [],
 	"enemyCounter" : 0,
-    "medKits" : [{"x" : 100,"y":100}],
-	"medKitCounter": 0
+    "medkits" : [{"x" : 100,"y":100}],
+	"medkitCounter": 0
 }
 function load(){
 	const canvas = document.getElementById("gameBoard");
@@ -41,10 +41,11 @@ function frameUpdate(){
 	//first handle controls!!
 	updateBullets(canvas);
 	updateEnemies(canvas);
-	updateMedkits(canvas);
+	updatemedkit(canvas);
 	//second handle drawing
-	drawUpdate(canvas);
 	collisions();
+	drawUpdate(canvas);
+	
 	
 }
 
@@ -109,9 +110,9 @@ function drawUpdate(canvas) {
 			ctx.fillRect(bullet.x,bullet.y,25,25)
 		}
 		ctx.fillStyle="#ff0000"
-		for(let i=0; i < gameData.medKits.length; i++){
-			const medKit = gameData.medKits[i];
-			ctx.fillRect(medKit.x,medKit.y,25,25)
+		for(let i=0; i < gameData.medkits.length; i++){
+			const medkit = gameData.medkits[i];
+			ctx.fillRect(medkit.x,medkit.y,25,25)
 		}
 		
 		
@@ -125,18 +126,17 @@ function launchBullet(bullet) {
 	
 	
 }
-function updateMedkits(canvas){
+function updatemedkit(canvas){
 	gameData.medkitCounter += 1;
 	if (gameData.medkitCounter > 30 && gameData.medkits.length < 5) {
 			var obj = {
 				x: Math.random() *canvas.width,
 				y: Math.random()* canvas.height,
 			}
-			gameData.medKits.push(obj);
+			gameData.medkits.push(obj);
 			gameData.medkitCounter = 0;
 		
 	}
-	gameData.medKitCounter += 1;
 }
 function updateBullets(canvas){
 	for(let i=0; i < gameData.bullets.length; i++){
@@ -279,7 +279,7 @@ function collisions(){
 	//enemy bullets collide with player!!
 	const bulletHeightObj = {width: bulletWidth, height: bulletHeight};
 	const playerHeightObj = {width: playerCenterX*2, height: playerCenterY*2};
-	const medkitHeightObj = {width: medkitWidth,     height: medKitHeight };
+	const medkitHeightObj = {width: medkitWidth,     height: medkitHeight };
 	
 	let j = 0;
 	 while(j < gameData.enemy_bullets.length ) {
@@ -323,10 +323,10 @@ function collisions(){
 	}
 	
 	let k = 0;
-	 while(k < gameData.medKits.length ) {
-		const bullet = gameData.medKits[k];
+	 while(k < gameData.medkits.length ) {
+		const bullet = gameData.medkits[k];
 		if(doOverlap(bullet,gameData.player,bulletHeightObj,playerHeightObj)) {
-				gameData.medKits.splice(k,1);
+				gameData.medkits.splice(k,1);
 				//remove player health!
 				gameData.player.health = (gameData.player.health+15) % 50;
 				document.getElementById("playerHealth").innerHTML = gameData.player.health;
@@ -334,8 +334,8 @@ function collisions(){
 			   k+=1;
 		   }
 	}
-	/*const medKitHeigh
-	for(let i = 0; i < medkits.length; i++){
+	/*const medkitHeigh
+	for(let i = 0; i < medkit.length; i++){
 		
 	}*/
 	function doOverlap(a,b,hw1,hw2){
