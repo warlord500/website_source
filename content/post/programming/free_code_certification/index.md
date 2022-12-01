@@ -25,7 +25,7 @@ incredibly useful but also from experience if you take it too far it ends up mak
 itself. 
 
 
-well here is my certification. be on the look out for changes to the page to show example applications using the freecode camp certificaton. 
+well here is [my certification](https://www.freecodecamp.org/5hammer). be on the look out for changes to the page to show example applications using the freecode camp certificaton. 
 
 
 ![jadon belezos free code camp certification](free_code_camp_javascript_data_algo.PNG)
