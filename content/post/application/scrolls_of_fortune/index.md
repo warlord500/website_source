@@ -2,7 +2,7 @@
 title = "Scrolls of Fortune"
 description = ""
 date = "2022-10-25T17:46:31-07:00"
-draft = true
+draft = false
 notoc = true  
 tags = ["application"]
 image = ""
@@ -18,9 +18,7 @@ custom_css = []
 				
 
 <button id="decide">decide reward</button>
-<script>
-function decideReward(e){
-	const rewards = ["curse of traps take d4 quest damage","curse of exercise","free crystal set",
-			"gain 2*d6 streak bonus add to any random task"];
-}
+<p id="scrollsBought"></p>
+<p id="logreward">log: <br/></p>
+<script src="script_for_scroll.js">
 </script>
