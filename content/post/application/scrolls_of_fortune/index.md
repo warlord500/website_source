@@ -18,11 +18,13 @@ custom_css = []
 
 this is a test algorithim designed to make a reward i like to do in habitica much more interesting 
 and easier i might do some practical effects too!
-
-<button id="decide">decide reward</button>
-<button id="decide_five">five rewards</button>
-<button id="decide_ten">ten rewards</button>
-<button id="pay_for">pay for the rewards(alter habitica gold)</button>
+<div>
+	<button id="decide">decide reward</button><br />
+	<button id="decide_five">five rewards</button><br />
+	<button id="decide_ten">ten rewards</button><br /><br />
+	<button id="reset_log">reset log</button><br />
+	<button id="pay_for">pay for the rewards(alter habitica gold)</button><br />
+</div>
 <p id="scrollsBought"> scrolls:<span id="numScrolls">0</span> cost: <span id="costScrolls">0gp</span></p>
 <p id="logreward">log: <br/></p>
 <script src="script_for_scroll.js"></script>
