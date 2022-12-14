@@ -17,7 +17,7 @@ this is a project that i am working on for free code camp front end library cert
 	<p>
 		quote:	<span id="quote"></span><br />
 		author: <span id="author"></span><br />
-		date: <span id="date"></span><br />
+		date: <span id="quotedate"></span><br />
 	</p>
 	<button id="new-quote">generate a new quote</button>
 </div>

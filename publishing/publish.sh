@@ -1,3 +1,7 @@
+if [$(basename $(pwd)) = "publishing"]
+then
+	cd ..
+fi
 git add .
 git commit 
 git push

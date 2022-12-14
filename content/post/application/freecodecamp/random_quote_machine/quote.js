@@ -12,6 +12,7 @@ const QUOTESARRAY = [
 	{ 
 		quote: "no more quotes for now",
 		author: "jadon belezos",
+ 		date: "UNKNOWN",
 	},
 		
 	{
@@ -26,6 +27,7 @@ function generateQuote(){
 		selectedQuote= Math.floor(Math.random()*QUOTESARRAY.length);
 	$("#quote").text(QUOTESARRAY[selectedQuote].quote)
 	$("#author").text(QUOTESARRAY[selectedQuote].author)
+	$("#quotedate").text(QUOTESARRAY[selectedQuote].date)
 
 
 }
