@@ -15,11 +15,12 @@ this is a project that i am working on for free code camp front end library cert
 <!--more-->
 <div id="quotebox"> 
 	<p>
-		quote:	<span id="quote"></span><br />
+		quote:	<span id="text"></span><br />
 		author: <span id="author"></span><br />
 		date: <span id="quotedate"></span><br />
 	</p>
 	<button id="new-quote">generate a new quote</button>
+	<a href="https://twitter.com/intent/tweet">tweet the quote</a>
 </div>
 
 <!--get me some jquery-->

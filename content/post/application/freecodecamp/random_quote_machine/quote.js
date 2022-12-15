@@ -24,7 +24,7 @@ const QUOTESARRAY = [
 ]
 function generateQuote(){
 
-		selectedQuote= Math.floor(Math.random()*QUOTESARRAY.length);
+	selectedQuote= Math.floor(Math.random()*QUOTESARRAY.length);
 	$("#quote").text(QUOTESARRAY[selectedQuote].quote)
 	$("#author").text(QUOTESARRAY[selectedQuote].author)
 	$("#quotedate").text(QUOTESARRAY[selectedQuote].date)
