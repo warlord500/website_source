@@ -25,9 +25,10 @@ const QUOTESARRAY = [
 function generateQuote(){
 
 	selectedQuote= Math.floor(Math.random()*QUOTESARRAY.length);
-	$("#quote").text(QUOTESARRAY[selectedQuote].quote)
+	$("#text").text(QUOTESARRAY[selectedQuote].quote)
 	$("#author").text(QUOTESARRAY[selectedQuote].author)
 	$("#quotedate").text(QUOTESARRAY[selectedQuote].date)
+	$("#tweet-quote").attr("href", "https://twitter.com/intent/tweet?text=" + encodeURI(QUOTESARRAY[selectedQuote].quote));
 
 
 }
