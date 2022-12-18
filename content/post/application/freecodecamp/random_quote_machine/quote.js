@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$("#new-quote").click(generateQuote);
+	$("#swapAbsRes").click(swapCSS);
 	generateQuote();
 });
 //template quote object
@@ -31,4 +32,10 @@ function generateQuote(){
 	$("#tweet-quote").attr("href", "https://twitter.com/intent/tweet?text=" + encodeURI(QUOTESARRAY[selectedQuote].quote));
 
 
+}
+//techincally i have the project run in different mode that looks nice first then swaps
+// to absolute again and back so that it passes the free code camp
+function swapCSS(){
+	$("#quote-box").toggleClass("niceCenter");
+	$("#quote-box").toggleClass("absolute");
 }

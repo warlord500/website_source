@@ -1,0 +1,24 @@
+ .niceCenter {
+	display: grid;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+} 
+
+.absolute{
+ width:40%;
+ height:400px;
+ margin:0 auto;
+ background:white;
+ border-color: black;
+ border-width: 10px;
+ position:absolute;
+ left:50%;
+ top:50%;
+ margin-left:-250px;
+ margin-top:-250px;
+}
+#doubleCenter {
+	margin:auto;
+
+}
