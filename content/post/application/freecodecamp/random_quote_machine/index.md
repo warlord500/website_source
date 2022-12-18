@@ -2,7 +2,7 @@
 title = "Random Quote Machine"
 description = ""
 date = "2022-12-13T11:14:56-08:00"
-draft = true
+draft =	false 
 notoc = true  
 tags = ["random_quote_machine"]
 image = ""
