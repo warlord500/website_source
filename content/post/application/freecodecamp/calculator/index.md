@@ -1,25 +1,24 @@
 +++
 title = "Calculator"
 description = ""
-date = "2020-11-05T21:06:39-08:00"
+date = "2022-12-18T15:15:00-08:00"
 draft = true
 notoc = true  
 tags = ["calculator"]
 image = ""
-custom_js = ["js/calc.js"]
+custom_js = ["calc.js","https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"]
 custom_css = ['custom.css']
- 
 +++
 below is my calculator app for [freecodecamp];
+
 
 <!--more-->
 
 
 <!-- remind myself to move this or change it somehow later on -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <div id="calc">
-<div id="display">
-  <span id="mainDisplay"></span> = <span id="result"></span>
+<div id="buttons">
+  <span id="display"></span> = <span id="result"></span>
   </div>
   <div id="calcButtons">
 	  <div class="row">
@@ -56,5 +55,6 @@ below is my calculator app for [freecodecamp];
   
   
 </div>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 [freecodecamp]: https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-javascript-calculator
