@@ -4,7 +4,7 @@ description = ""
 date = "2020-11-13T23:06:38-08:00"
 draft = true
 notoc = true  
-tags = ["application"]
+tags = ["application","freecodecamp","programming"]
 
 MainPage = false
 # edit this!!!!
