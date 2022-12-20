@@ -8,8 +8,9 @@ theme="blackburn"
 enableGitInfo = true
 enableInlineShortCodes = true
 #enableRobotsTXT = true
-#ok i am unsure if this is correct
-relativeUrls = true 
+#if this is enabled the head partial breaks in the theme for the side-menu.css!!
+
+relativeUrls = false 
 baseUrl="https://jadonbelezos.com/"
 publishDir = "D:/website_source/public_html/"
 [outputs]
@@ -109,11 +110,12 @@ disableLatLong = true
 	identifier = "ipfs"
 	url = "/ipns/ipfs.jadonbelezos.com/"
 [[menu.main]]
-    name = "programming"
+    name = "applications"
     pre = "<i class='fa fa-tags fa-fw'></i>"
     weight = 5
     identifier = "programming_list"
-    url = "/tags/programming/"
+    url = "/tags/application/"
+	
    
 	
 	
