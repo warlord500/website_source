@@ -2,7 +2,7 @@
 title = "Calculator"
 description = ""
 date = "2022-12-18T15:15:00-08:00"
-draft = true
+draft =	false 
 notoc = true  
 tags = ["freecodecamp"]
 image = ""

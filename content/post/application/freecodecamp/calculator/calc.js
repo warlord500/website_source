@@ -30,9 +30,26 @@ $(document).ready(function(){
 });
 //append To Display
 function appToDisplay(opOrNumber){
-  let exp = $("#display");
-  let space = (isOP(opOrNumber) ? " " : "");
-  exp.text(exp.text() + space +  opOrNumber + space);
+	let exp = $("#display");
+	let op = isOP(opOrNumber);
+	const len =exp.text().length; 		
+	const lastChar =  exp.text().substring(len-1,len);
+	if(len == 1 && op==false && lastChar=="0"){
+		exp.text(opOrNumber);
+		
+	} else  if(op== true){
+		//handle multiple operators here somehow?
+		//start by figuring out if their are multiple operators?
+		//extract the to check if their is an operator?
+		if(isOP(lastChar)){
+			//get rid of the last operator? i think this will work?
+			exp.text(exp.text().substring(0,len-1)); 
+		}
+		exp.text(exp.text() +  opOrNumber);
+	} else {
+	
+		exp.text(exp.text() +  opOrNumber);
+	}
  
 }
 
@@ -41,18 +58,19 @@ function appToDisplay(opOrNumber){
 function checkExpression(){
 	let result = $("#result");
 	let display = $("#display");
-	if(result.text() == ""){
+	let exp = display.text();
+	display.text(eval(display.text()));
+/*	if(result.text() == ""){
 		//compute expression using eval. 
 		// honestly i feel like this is cheating however free code camp used it 
 		// so i dont feel so bad for using it. 
 		let exp = display.text();
-		result.text(eval(display.text())); 
-		display.text($("#result").text());
+		display.text(eval(display.text()));
 			
 	} else {
 		$("#display").text(result.text());
 		result.text("");
-	}
+	} */
  
 }
 
@@ -84,7 +102,7 @@ function isOP(expChar){
 	switch(expChar){
 		case '+':
 		case '*':
-		case '\\':
+		case '/':
 		case '-':
 			return true;
 		default: 
