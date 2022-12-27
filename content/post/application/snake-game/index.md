@@ -7,7 +7,7 @@ notoc = true
 tags = ["application"]
 topics = []
 
-custom_js = []
+custom_js = ["main.js"]
 custom_css = []
 +++
 
@@ -16,5 +16,4 @@ custom_css = []
 <div id="application">
 	<p> apples eaten: <span id="score">0</span></p>
 	<canvas id="gameBoard" width="700px" height="600px"></canvas>
-	<script src="js/score.js"></script>
 </div>
