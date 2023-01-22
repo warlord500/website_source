@@ -1,0 +1,25 @@
+
+
+
+
+{{ partial "header.html" . }}
+<div class="header">
+    <h1>404 - missing content</h1>
+    <h2>cant find item</h2>
+</div>
+<div class="content">
+    <h3> oops, the web page your looking for doesn't exist. </h3>
+	<p> if you have found a page with a broken link please contact me at 
+	    <a href="jmailto:jjbelezos@gmail">jbelezos@gmail.com</a> or 
+	    <a href="mailto:jadonbel@jadonbelezos.com">jadonbel@jadonbelezos.com</a></p>
+
+the link that got you here is <a id="lostLink" href="#">#</a>
+
+    <script>
+	let link = document.getElementById("lostLink");
+	link.href = window.location.href;
+	link.innerHTML = window.location.href;
+    </script>
+</div>
+
+{{ partial "footer.html" . }}

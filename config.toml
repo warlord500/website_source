@@ -10,7 +10,7 @@ enableInlineShortCodes = true
 #enableRobotsTXT = true
 #if this is enabled the head partial breaks in the theme for the side-menu.css!!
 
-relativeUrls = false 
+relativeUrls = true 
 baseUrl="https://jadonbelezos.com/"
 publishDir = "D:/website_source/public_html/"
 [outputs]
