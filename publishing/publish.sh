@@ -5,6 +5,7 @@ fi
 git add .
 git commit 
 git push
+git push personal
 #makes getting the password easier
 /c/Program\ files\ \(x86\)/KeePass\ Password\ safe/KeePass.exe &
 Hugo --cleanDestinationDir --destination "public_html/" --minify

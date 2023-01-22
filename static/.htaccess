@@ -20,7 +20,7 @@ RewriteEngine on
 
 
 # custom .htaccess below
-ErrorDocument 404 /404/
+ErrorDocument 404 /404.html
 RewriteCond %{HTTPS} off [OR]
 #RewriteCond %{HTTP_HOST} ^www\.jadonbelezos\.com [NC]
 #RewriteRule (.*) https://jadonbelezos.com/$1 [L,R=301]
