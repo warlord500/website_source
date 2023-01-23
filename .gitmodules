@@ -4,3 +4,6 @@
 [submodule "static/A_guide_to_visiting_canada"]
 	path = static/A_guide_to_visiting_canada
 	url = https://github.com/warlord500/a_guide_to_visiting_canada.git
+[submodule "content/cs-135"]
+	path = content/cs-135
+	url = https://github.com/warlord500/cs-135s.git

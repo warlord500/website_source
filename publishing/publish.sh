@@ -10,12 +10,6 @@ tar -zcvf 404.tgz public_html
 # as security concern dont write the password here because it would be on git hub than anyone can access it.
 scp 404.tgz jadonbel@jadonbelezos.com:/home/jadonbel/
 ssh jadonbel@jadonbelezos.com "./deploy.sh"
-HASH= $(ipfs add -qr --only-hash /d/website_source/public_html/ | tail -n 1)
-ipfsh name publish $HASH
-
-echo "publishing to pinata";
-read $LOGINKEY
-ipfs pin remote add $HASH  $LOGINKEY
 
 #paging api for facebook 
 # look up https://developers.facebook.com/docs/graph-api/overview#paging
