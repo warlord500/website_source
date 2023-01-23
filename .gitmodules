@@ -7,3 +7,6 @@
 [submodule "content/cs-135"]
 	path = content/cs-135
 	url = https://github.com/warlord500/cs-135s.git
+[submodule "static/cs-135s"]
+	path = static/cs-135s
+	url = https://github.com/warlord500/cs-135s.git
