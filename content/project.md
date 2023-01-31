@@ -5,6 +5,9 @@ tags = []
 title = "projects"
 topics = []
 +++
+
+currently working this certification from freecodeCamp.org/
+
 this is a list of all the projects I have ever done.
 many of them are work in progresses.<br /><br />
  
