@@ -41,13 +41,13 @@ function reset(){
 //but complicates the generating
 function generateLogText(){
 	const rewards = ["curse of exercise","curse of traps take d4 quest damage","free crystal set",
-			"gain 2*d10 streak bonus add to any random task","d4 loot bonus + 5 gold","10 day streak bonus"];
+			"gain 2*d10 streak bonus add to all active dallies","d4 loot bonus + 5 gold","10 day streak bonus"];
 	let selectedReward = Math.floor(Math.random()*rewards.length);
 	let logText = "<label><input type=\"checkbox\"> ";
 	if(selectedReward == 1){
 		logText += "(" + rollDice4().toString() + "dmg) ";
 	} else if( selectedReward == 3){
-		logText += "(" + rollDice10().toString() + "streak) ";
+		logText += "(" + (rollDice10()*2).toString() + "streak) ";
 	
 	} else if( selectedReward == 4){
 		logText += "(" + rollDice4().toString() + "habit click) ";
