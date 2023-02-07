@@ -20,3 +20,4 @@ below is a list of link to the various homework project so far that i am working
    text
 2. [week 2](/cs-135s/week2/basic.html) a order form for calculating the total cost of things
 3. [week 3](/cs-135s/week3/basic.html) an adventure game
+4. [week 4](/cs-135s/week4/basic.html) a student exam scoring calculator 
